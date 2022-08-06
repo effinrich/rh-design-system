@@ -1,2 +1,2 @@
-export * from './Badge';
-export { Text } from '@chakra-ui/react';
+export * from './Badge'
+export { Text } from '@chakra-ui/react'

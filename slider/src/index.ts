@@ -1,8 +1,8 @@
-export * from './Slider';
+export * from './Slider'
 export {
-  SliderTrack,
   SliderFilledTrack,
-  SliderThumb,
   SliderMark,
-} from '@chakra-ui/react';
-export { chakra } from '@chakra-ui/system';
+  SliderThumb,
+  SliderTrack
+} from '@chakra-ui/react'
+export { chakra } from '@chakra-ui/system'

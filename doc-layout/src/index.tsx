@@ -1,42 +1,45 @@
-import * as React from 'react';
-import { MDXProvider } from '@mdx-js/react';
+import * as React from 'react'
 import {
   ChakraProvider,
-  extendTheme,
-  useColorMode,
   ColorModeScript,
+  extendTheme,
   ThemeConfig,
-} from '@chakra-ui/react';
+  useColorMode
+} from '@chakra-ui/react'
 import {
   CoreLayout,
-  StylesheetSwitch,
-} from '@divriots/dockit-react/mdx-layout-core';
-import { theme } from '~/theme';
-import { components } from './components';
-import './style.css';
-import { Logo } from './Logo';
-import { ColorScheme } from '@divriots/dockit-react/mdx-layout-core/dist/StylesheetSwitch';
+  StylesheetSwitch
+} from '@divriots/dockit-react/mdx-layout-core'
+import { ColorScheme } from '@divriots/dockit-react/mdx-layout-core/dist/StylesheetSwitch'
+import { MDXProvider } from '@mdx-js/react'
 
-// extend default Chakra theme
+import { components } from './components'
+import { Logo } from './Logo'
+
+import './style.css'
+
+import { theme } from '~/theme'
+
+// Extend default Chakra theme
 const config: ThemeConfig = {
   initialColorMode: 'system',
-  useSystemColorMode: false,
-};
+  useSystemColorMode: false
+}
 
-const fullTheme = extendTheme({ ...theme, config });
+const fullTheme = extendTheme({ ...theme, config })
 
 const ColorModeSwitch = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode, toggleColorMode } = useColorMode()
 
   return (
     <StylesheetSwitch
       colorScheme={colorMode as 'dark' | 'light'}
       onSwitch={() => toggleColorMode()}
     />
-  );
-};
+  )
+}
 
-const ThemeProviderLayout = (props) => (
+const ThemeProviderLayout = props => (
   <>
     <ColorModeScript initialColorMode="system" />
     <MDXProvider components={components}>
@@ -53,6 +56,6 @@ const ThemeProviderLayout = (props) => (
       </ChakraProvider>
     </MDXProvider>
   </>
-);
+)
 
-export default ThemeProviderLayout;
+export default ThemeProviderLayout

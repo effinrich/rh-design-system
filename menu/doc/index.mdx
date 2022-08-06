@@ -1,31 +1,31 @@
-import {
-  ChevronDownIcon,
-  HamburgerIcon,
-  AddIcon,
-  ExternalLinkIcon,
-  RepeatIcon,
-  EditIcon,
-} from '../src/index';
-import {
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
-  Portal,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuItemOption,
-} from '../src/index';
-import { Menu } from '~/menu';
-import { Button } from '~/button';
-import { Image } from '~/image';
-import { IconButton } from '~/icon-button';
+import { Playground } from '@divriots/dockit-react/playground'
+import { mdx } from '@mdx-js/react'
+import React from 'react'
 
-import React from 'react';
-import { mdx } from '@mdx-js/react';
-import { Playground } from '@divriots/dockit-react/playground';
-import Layout from '~/doc-layout';
-export default Layout;
+import { Button } from '~/button'
+import Layout from '~/doc-layout'
+import { IconButton } from '~/icon-button'
+import { Image } from '~/image'
+import { Menu } from '~/menu'
+
+import {
+  AddIcon,
+  ChevronDownIcon,
+  EditIcon,
+  ExternalLinkIcon,
+  HamburgerIcon,
+  MenuButton,
+  MenuDivider,
+  MenuGroup,
+  MenuItem,
+  MenuItemOption,
+  MenuList,
+  MenuOptionGroup,
+  Portal,
+  RepeatIcon
+} from '../src/index'
+
+export default Layout
 
 # Menu
 
@@ -57,8 +57,8 @@ import {
   MenuOptionGroup,
   MenuIcon,
   MenuCommand,
-  MenuDivider,
-} from '@chakra-ui/react';
+  MenuDivider
+} from '@chakra-ui/react'
 ```
 
 ## Usage
@@ -165,7 +165,7 @@ the letter you typed.
     ChevronDownIcon,
     MenuList,
     MenuItem,
-    Image,
+    Image
   }}
   code={`
 <Menu>
@@ -214,7 +214,7 @@ commands (or hotkeys) to menu items, you can use the `command` prop.
     AddIcon,
     ExternalLinkIcon,
     RepeatIcon,
-    EditIcon,
+    EditIcon
   }}
   code={`
 <Menu>
@@ -302,7 +302,7 @@ To group related `MenuItem`s, use the `MenuGroup` component and pass it a
     MenuList,
     MenuGroup,
     MenuItem,
-    MenuDivider,
+    MenuDivider
   }}
   code={`
 <Menu>
@@ -337,7 +337,7 @@ options. Use the `MenuOptionGroup` and `MenuItemOption` components.
     MenuList,
     MenuOptionGroup,
     MenuItemOption,
-    MenuDivider,
+    MenuDivider
   }}
   code={`
 <Menu closeOnSelect={false}>

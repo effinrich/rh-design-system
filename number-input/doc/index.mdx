@@ -1,26 +1,28 @@
+import { Playground } from '@divriots/dockit-react/playground'
+import { mdx } from '@mdx-js/react'
+import React from 'react'
+
+import { Button } from '~/button'
+import Layout from '~/doc-layout'
+import { Flex } from '~/flex'
+import { Input } from '~/input'
+import { NumberInput } from '~/number-input'
+import { Slider } from '~/slider'
+import { Stack } from '~/stack'
+
 import {
+  HStack,
+  NumberDecrementStepper,
+  NumberIncrementStepper,
   NumberInputField,
   NumberInputStepper,
-  NumberIncrementStepper,
-  NumberDecrementStepper,
-  SliderTrack,
   SliderFilledTrack,
   SliderThumb,
-  useNumberInput,
-  HStack,
-} from '../src/index';
-import { NumberInput } from '~/number-input';
-import { Stack } from '~/stack';
-import { Flex } from '~/flex';
-import { Slider } from '~/slider';
-import { Button } from '~/button';
-import { Input } from '~/input';
+  SliderTrack,
+  useNumberInput
+} from '../src/index'
 
-import React from 'react';
-import { mdx } from '@mdx-js/react';
-import { Playground } from '@divriots/dockit-react/playground';
-import Layout from '~/doc-layout';
-export default Layout;
+export default Layout
 
 # Number Input
 
@@ -47,8 +49,8 @@ import {
   NumberInputField,
   NumberInputStepper,
   NumberIncrementStepper,
-  NumberDecrementStepper,
-} from '@chakra-ui/react';
+  NumberDecrementStepper
+} from '@chakra-ui/react'
 ```
 
 ## Usage
@@ -62,7 +64,7 @@ styling of each part.
     NumberInputField,
     NumberInputStepper,
     NumberIncrementStepper,
-    NumberDecrementStepper,
+    NumberDecrementStepper
   }}
   code={`
 <NumberInput>
@@ -87,7 +89,7 @@ range.
     NumberInputField,
     NumberInputStepper,
     NumberIncrementStepper,
-    NumberDecrementStepper,
+    NumberDecrementStepper
   }}
   code={`
 <NumberInput defaultValue={15} min={10} max={20}>
@@ -112,7 +114,7 @@ value. By default, the value is rounded to match the number of decimals in the
     NumberInputField,
     NumberInputStepper,
     NumberIncrementStepper,
-    NumberDecrementStepper,
+    NumberDecrementStepper
   }}
   code={`
 <NumberInput step={5} defaultValue={15} min={10} max={30}>
@@ -137,7 +139,7 @@ points.
     NumberInputField,
     NumberInputStepper,
     NumberIncrementStepper,
-    NumberDecrementStepper,
+    NumberDecrementStepper
   }}
   code={`
 <NumberInput defaultValue={15} precision={2} step={0.2}>
@@ -167,7 +169,7 @@ To disable this behavior, pass `clampValueOnBlur` and set to `false`.
     NumberInputField,
     NumberInputStepper,
     NumberIncrementStepper,
-    NumberDecrementStepper,
+    NumberDecrementStepper
   }}
   code={`
 <NumberInput defaultValue={15} max={30} clampValueOnBlur={false}>
@@ -196,7 +198,7 @@ support this use case.
     NumberInputField,
     NumberInputStepper,
     NumberIncrementStepper,
-    NumberDecrementStepper,
+    NumberDecrementStepper
   }}
   code={`
 <NumberInput
@@ -222,7 +224,7 @@ support this use case.
     NumberInputField,
     NumberInputStepper,
     NumberIncrementStepper,
-    NumberDecrementStepper,
+    NumberDecrementStepper
   }}
   code={`
 function Example() {
@@ -258,7 +260,7 @@ the input.
     NumberInputField,
     NumberInputStepper,
     NumberIncrementStepper,
-    NumberDecrementStepper,
+    NumberDecrementStepper
   }}
   code={`
 <Stack shouldWrapChildren direction="row">
@@ -305,7 +307,7 @@ can also change the icons used in the steppers.
     NumberInputField,
     NumberInputStepper,
     NumberIncrementStepper,
-    NumberDecrementStepper,
+    NumberDecrementStepper
   }}
   code={`
 <NumberInput size="sm" defaultValue={15} min={10}>
@@ -346,7 +348,7 @@ Here's an example of how to do that:
     Slider,
     SliderTrack,
     SliderFilledTrack,
-    SliderThumb,
+    SliderThumb
   }}
   code={`
 function SliderInput() {
@@ -419,7 +421,7 @@ values using the mouse wheel events. To activate this, pass the
     NumberInputField,
     NumberInputStepper,
     NumberIncrementStepper,
-    NumberDecrementStepper,
+    NumberDecrementStepper
   }}
   code={`
 function MouseWheelExample() {

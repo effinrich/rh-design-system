@@ -1,2 +1,2 @@
-export * from './Container';
-export { VStack } from '@chakra-ui/react';
+export * from './Container'
+export { VStack } from '@chakra-ui/react'

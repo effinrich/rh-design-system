@@ -1,13 +1,15 @@
-import { Text, RadioGroup } from '../src/index';
-import { Textarea } from '~/textarea';
-import { Stack } from '~/stack';
-import { Radio } from '~/radio';
+import { Playground } from '@divriots/dockit-react/playground'
+import { mdx } from '@mdx-js/react'
+import React from 'react'
 
-import React from 'react';
-import { mdx } from '@mdx-js/react';
-import { Playground } from '@divriots/dockit-react/playground';
-import Layout from '~/doc-layout';
-export default Layout;
+import Layout from '~/doc-layout'
+import { Radio } from '~/radio'
+import { Stack } from '~/stack'
+import { Textarea } from '~/textarea'
+
+import { RadioGroup, Text } from '../src/index'
+
+export default Layout
 
 # Textarea
 
@@ -16,7 +18,7 @@ The `Textarea` component allows you to easily create multi-line text inputs.
 ## Import
 
 ```js
-import { Textarea } from '@chakra-ui/react';
+import { Textarea } from '@chakra-ui/react'
 ```
 
 ### Usage

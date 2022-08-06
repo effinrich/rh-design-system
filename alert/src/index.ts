@@ -1,9 +1,9 @@
-export * from './Alert';
+export * from './Alert'
+export { Container } from '@chakra-ui/layout'
 export {
+  AlertDescription,
   AlertIcon,
   AlertTitle,
-  AlertDescription,
-  CloseButton,
-} from '@chakra-ui/react';
-export { chakra } from '@chakra-ui/system';
-export { Container } from '@chakra-ui/layout';
+  CloseButton
+} from '@chakra-ui/react'
+export { chakra } from '@chakra-ui/system'

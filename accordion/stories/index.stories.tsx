@@ -1,7 +1,16 @@
-import { Container } from '../src/index';
+import * as React from 'react'
+
+import { themeDecorator } from '../../story-layout/src/index'
 import {
+  Accordion,
+  AccordionButton,
+  AccordionIcon,
+  AccordionItem,
+  AccordionPanel,
   Box,
   Button,
+  chakra,
+  Container,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
@@ -9,27 +18,16 @@ import {
   DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
-  useDisclosure,
-} from '../src/index';
-import { chakra } from '../src/index';
-import * as React from 'react';
-import { Accordion } from '../src/index';
-import {
-  AccordionButton,
-  AccordionIcon,
-  AccordionItem,
-  AccordionPanel,
-} from '../src/index';
-
-import { themeDecorator } from '../../story-layout/src/index';
+  useDisclosure
+} from '../src/index'
 
 export default {
   title: 'Accordion',
   decorators: [themeDecorator],
   parameters: {
-    layout: 'centered',
-  },
-};
+    layout: 'centered'
+  }
+}
 
 /**
  * By default, only one accordion can be visible
@@ -64,7 +62,7 @@ export const Basic = () => (
       <AccordionPanel>Panel 2</AccordionPanel>
     </AccordionItem>
   </Accordion>
-);
+)
 
 export const allowToggle = () => (
   <Accordion allowToggle>
@@ -102,7 +100,7 @@ export const allowToggle = () => (
       </AccordionPanel>
     </AccordionItem>
   </Accordion>
-);
+)
 
 export const allowMultiple = () => (
   <Accordion allowMultiple>
@@ -140,7 +138,7 @@ export const allowMultiple = () => (
       </AccordionPanel>
     </AccordionItem>
   </Accordion>
-);
+)
 
 export const stylingExpanded = () => (
   <Accordion allowToggle>
@@ -161,7 +159,7 @@ export const stylingExpanded = () => (
       </AccordionPanel>
     </AccordionItem>
   </Accordion>
-);
+)
 
 const data = [
   { title: 'First Item', text: 'Some value 1...' },
@@ -170,31 +168,31 @@ const data = [
   { title: 'Fourth Item', text: 'Some value 4...' },
   { title: 'Fifth Item', text: 'Some value 5...' },
   { title: 'Some other text', text: 'Some value 6...' },
-  { title: 'Another one', text: 'Some value 7...' },
-];
+  { title: 'Another one', text: 'Some value 7...' }
+]
 
 export function Bug_2160() {
-  const inputRef = React.useRef<HTMLInputElement>();
-  const [displayData, setDisplayData] = React.useState(data);
-  const [filter, setFilter] = React.useState('');
+  const inputRef = React.useRef<HTMLInputElement>()
+  const [displayData, setDisplayData] = React.useState(data)
+  const [filter, setFilter] = React.useState('')
 
   React.useEffect(() => {
     if (!filter || filter === '') {
-      setDisplayData(data);
+      setDisplayData(data)
     }
 
-    const filteredData = data.filter((item) =>
+    const filteredData = data.filter(item =>
       item.title.toLowerCase().includes(filter.toLowerCase())
-    );
-    setDisplayData(filteredData);
-  }, [filter]);
+    )
+    setDisplayData(filteredData)
+  }, [filter])
 
   React.useEffect(() => {
-    inputRef.current?.focus();
-  }, [displayData]);
+    inputRef.current?.focus()
+  }, [displayData])
 
   function onInputChange(e) {
-    setFilter(e.target.value);
+    setFilter(e.target.value)
   }
 
   return (
@@ -225,11 +223,11 @@ export function Bug_2160() {
         </Accordion>
       )}
     </chakra.div>
-  );
+  )
 }
 
 export const FocusBug = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
     <Box textAlign="center" fontSize="xl">
@@ -299,8 +297,8 @@ export const FocusBug = () => {
         </DrawerContent>
       </Drawer>
     </Box>
-  );
-};
+  )
+}
 
 export const WithDisabledAccordionItem = () => {
   return (
@@ -326,5 +324,5 @@ export const WithDisabledAccordionItem = () => {
         <AccordionPanel>Five Content</AccordionPanel>
       </AccordionItem>
     </Accordion>
-  );
-};
+  )
+}

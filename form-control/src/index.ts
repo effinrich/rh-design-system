@@ -1,17 +1,17 @@
-export * from './FormControl';
+export * from './FormControl'
+export type { FormControlOptions } from '@chakra-ui/react'
 export {
-  FormLabel,
-  FormHelperText,
-  RadioGroup,
-  HStack,
-  NumberInputField,
-  NumberInputStepper,
-  NumberIncrementStepper,
-  NumberDecrementStepper,
   FormErrorIcon,
   FormErrorMessage,
-  useFormControl,
-} from '@chakra-ui/react';
-export type { FormControlOptions } from '@chakra-ui/react';
-export { chakra, useMultiStyleConfig } from '@chakra-ui/system';
-export type { PropsOf } from '@chakra-ui/system';
+  FormHelperText,
+  FormLabel,
+  HStack,
+  NumberDecrementStepper,
+  NumberIncrementStepper,
+  NumberInputField,
+  NumberInputStepper,
+  RadioGroup,
+  useFormControl
+} from '@chakra-ui/react'
+export type { PropsOf } from '@chakra-ui/system'
+export { chakra, useMultiStyleConfig } from '@chakra-ui/system'

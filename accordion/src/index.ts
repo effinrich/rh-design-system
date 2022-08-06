@@ -1,8 +1,10 @@
-export * from './Accordion';
+export * from './Accordion'
+export { AddIcon, MinusIcon } from '@chakra-ui/icons'
+export { Container } from '@chakra-ui/layout'
 export {
-  AccordionItem,
   AccordionButton,
   AccordionIcon,
+  AccordionItem,
   AccordionPanel,
   Box,
   Button,
@@ -13,8 +15,6 @@ export {
   DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
-  useDisclosure,
-} from '@chakra-ui/react';
-export { MinusIcon, AddIcon } from '@chakra-ui/icons';
-export { Container } from '@chakra-ui/layout';
-export { chakra } from '@chakra-ui/system';
+  useDisclosure
+} from '@chakra-ui/react'
+export { chakra } from '@chakra-ui/system'

@@ -1,2 +1,2 @@
-export * from './Grid';
-export { GridItem } from '@chakra-ui/react';
+export * from './Grid'
+export { GridItem } from '@chakra-ui/react'

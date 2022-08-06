@@ -1,12 +1,14 @@
-import { WrapItem } from '../src/index';
-import { Wrap } from '~/wrap';
-import { Center } from '~/center';
+import { Playground } from '@divriots/dockit-react/playground'
+import { mdx } from '@mdx-js/react'
+import React from 'react'
 
-import React from 'react';
-import { mdx } from '@mdx-js/react';
-import { Playground } from '@divriots/dockit-react/playground';
-import Layout from '~/doc-layout';
-export default Layout;
+import { Center } from '~/center'
+import Layout from '~/doc-layout'
+import { Wrap } from '~/wrap'
+
+import { WrapItem } from '../src/index'
+
+export default Layout
 
 # Wrap
 
@@ -20,7 +22,7 @@ well with things like dialog buttons, tags, and chips.
 ## Import
 
 ```js
-import { Wrap, WrapItem } from '@chakra-ui/react';
+import { Wrap, WrapItem } from '@chakra-ui/react'
 ```
 
 - **Wrap**: Wrap composes the `Box` component and renders a `<ul>` tag

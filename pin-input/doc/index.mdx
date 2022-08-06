@@ -1,12 +1,14 @@
-import { HStack, PinInputField } from '../src/index';
-import { PinInput } from '~/pin-input';
-import { Stack } from '~/stack';
+import { Playground } from '@divriots/dockit-react/playground'
+import { mdx } from '@mdx-js/react'
+import React from 'react'
 
-import React from 'react';
-import { mdx } from '@mdx-js/react';
-import { Playground } from '@divriots/dockit-react/playground';
-import Layout from '~/doc-layout';
-export default Layout;
+import Layout from '~/doc-layout'
+import { PinInput } from '~/pin-input'
+import { Stack } from '~/stack'
+
+import { HStack, PinInputField } from '../src/index'
+
+export default Layout
 
 # Pin Input
 
@@ -18,7 +20,7 @@ The most common application is for entering OTP or security codes.
 ## Import
 
 ```js
-import { PinInput, PinInputField } from '@chakra-ui/react';
+import { PinInput, PinInputField } from '@chakra-ui/react'
 ```
 
 - **PinInput:** The component that provides context to all the pin-input fields.

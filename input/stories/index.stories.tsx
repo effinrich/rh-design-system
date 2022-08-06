@@ -1,39 +1,39 @@
+/* eslint-disable react/no-children-prop */
+import * as React from 'react'
+
+import { themeDecorator } from '../../story-layout/src/index'
 import {
+  chakra,
+  CheckIcon,
   FormControl,
   FormErrorMessage,
   FormHelperText,
   FormLabel,
-} from '../src/index';
-import { CheckIcon, PhoneIcon } from '../src/index';
-import { useDisclosure } from '../src/index';
-import { Stack } from '../src/index';
-import { chakra } from '../src/index';
-import * as React from 'react';
-import { Input } from '../src/index';
-import {
+  Input,
   InputGroup,
   InputLeftAddon,
   InputLeftElement,
   InputRightAddon,
   InputRightElement,
-} from '../src/index';
-
-import { themeDecorator } from '../../story-layout/src/index';
+  PhoneIcon,
+  Stack,
+  useDisclosure
+} from '../src/index'
 
 export default {
   title: 'Input',
   decorators: [themeDecorator],
   parameters: {
-    layout: 'centered',
-  },
-};
+    layout: 'centered'
+  }
+}
 
-export const Basic = () => <Input placeholder="Basic input" />;
+export const Basic = () => <Input placeholder="Basic input" />
 
 export const Controlled = () => {
-  const [value, setValue] = React.useState('Starting...');
+  const [value, setValue] = React.useState('Starting...')
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) =>
-    setValue(event.target.value);
+    setValue(event.target.value)
 
   return (
     <>
@@ -44,16 +44,16 @@ export const Controlled = () => {
       />
       <pre>{JSON.stringify(value, null, 2)}</pre>
     </>
-  );
-};
+  )
+}
 
 export const WithSizes = () => (
   <Stack align="start">
-    {['xs', 'sm', 'md', 'lg'].map((size) => (
+    {['xs', 'sm', 'md', 'lg'].map(size => (
       <Input key={size} size={size} placeholder="This is an input component" />
     ))}
   </Stack>
-);
+)
 
 export const WithStates = () => (
   <Stack align="start">
@@ -62,7 +62,7 @@ export const WithStates = () => (
     <Input isDisabled placeholder="isDisabled" />
     <Input isReadOnly placeholder="isReadonly" />
   </Stack>
-);
+)
 
 export const WithVariants = () => (
   <Stack align="start">
@@ -71,7 +71,7 @@ export const WithVariants = () => (
     <Input variant="flushed" placeholder="Flushed" />
     <Input variant="unstyled" placeholder="Unstyled" />
   </Stack>
-);
+)
 
 export const WithInputAddon = () => (
   <Stack align="start">
@@ -86,7 +86,7 @@ export const WithInputAddon = () => (
       <InputRightAddon children=".com" />
     </InputGroup>
   </Stack>
-);
+)
 
 export const WithInputElement = () => (
   <Stack align="start">
@@ -101,11 +101,11 @@ export const WithInputElement = () => (
       <InputRightElement children={<CheckIcon color="green.500" />} />
     </InputGroup>
   </Stack>
-);
+)
 
 export function PasswordInput() {
-  const [show, setShow] = React.useState(false);
-  const handleClick = () => setShow(!show);
+  const [show, setShow] = React.useState(false)
+  const handleClick = () => setShow(!show)
 
   return (
     <InputGroup size="md">
@@ -120,7 +120,7 @@ export function PasswordInput() {
         </chakra.button>
       </InputRightElement>
     </InputGroup>
-  );
+  )
 }
 
 export const WithFocusAndErrorColors = () => (
@@ -144,7 +144,7 @@ export const WithFocusAndErrorColors = () => (
       placeholder="Here is a sample placeholder"
     />
   </Stack>
-);
+)
 
 function FormError(props: any) {
   return (
@@ -157,11 +157,11 @@ function FormError(props: any) {
       borderRadius="sm"
       {...props}
     />
-  );
+  )
 }
 
 export const WithFormControl = () => {
-  const [isError, setIsError] = React.useState(false);
+  const [isError, setIsError] = React.useState(false)
   return (
     <Stack align="start">
       <FormControl id="first-name" isInvalid={isError}>
@@ -178,13 +178,13 @@ export const WithFormControl = () => {
         </InputGroup>
         <FormHelperText>Keep it very short and sweet!</FormHelperText>
       </FormControl>
-      <button onClick={() => setIsError((s) => !s)}>Toggle Invalid</button>
+      <button onClick={() => setIsError(s => !s)}>Toggle Invalid</button>
     </Stack>
-  );
-};
+  )
+}
 
 export const WithInputElementBug = () => {
-  const { isOpen, onToggle } = useDisclosure({ defaultIsOpen: true });
+  const { isOpen, onToggle } = useDisclosure({ defaultIsOpen: true })
   return (
     <>
       <button onClick={onToggle}>Toggle element</button>
@@ -193,5 +193,5 @@ export const WithInputElementBug = () => {
         <Input name="input" placeholder="placeholder" />
       </InputGroup>
     </>
-  );
-};
+  )
+}

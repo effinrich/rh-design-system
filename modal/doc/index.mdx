@@ -1,29 +1,31 @@
-import {
-  useDisclosure,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalCloseButton,
-  ModalBody,
-  ModalFooter,
-  Text,
-  FormLabel,
-  RadioGroup,
-} from '../src/index';
-import Lorem from 'react-lorem-component';
-import { Button } from '~/button';
-import { Modal } from '~/modal';
-import { Box } from '~/box';
-import { FormControl } from '~/form-control';
-import { Input } from '~/input';
-import { Stack } from '~/stack';
-import { Radio } from '~/radio';
+import { Playground } from '@divriots/dockit-react/playground'
+import { mdx } from '@mdx-js/react'
+import React from 'react'
+import Lorem from 'react-lorem-component'
 
-import React from 'react';
-import { mdx } from '@mdx-js/react';
-import { Playground } from '@divriots/dockit-react/playground';
-import Layout from '~/doc-layout';
-export default Layout;
+import { Box } from '~/box'
+import { Button } from '~/button'
+import Layout from '~/doc-layout'
+import { FormControl } from '~/form-control'
+import { Input } from '~/input'
+import { Modal } from '~/modal'
+import { Radio } from '~/radio'
+import { Stack } from '~/stack'
+
+import {
+  FormLabel,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
+  RadioGroup,
+  Text,
+  useDisclosure
+} from '../src/index'
+
+export default Layout
 
 # Modal Dialog
 
@@ -54,8 +56,8 @@ import {
   ModalHeader,
   ModalFooter,
   ModalBody,
-  ModalCloseButton,
-} from '@chakra-ui/react';
+  ModalCloseButton
+} from '@chakra-ui/react'
 ```
 
 ## Usage
@@ -74,7 +76,7 @@ element. If there are no tabbled elements, focus is set on `ModalContent`.
     ModalCloseButton,
     ModalBody,
     Lorem,
-    ModalFooter,
+    ModalFooter
   }}
   code={`
 function BasicUsage() {
@@ -122,7 +124,7 @@ closes.
     ModalCloseButton,
     ModalBody,
     Lorem,
-    ModalFooter,
+    ModalFooter
   }}
   code={`
 function ReturnFocus() {
@@ -176,7 +178,7 @@ behind the modal. Chakra does this by default but you can set
     ModalBody,
     Text,
     Lorem,
-    ModalFooter,
+    ModalFooter
   }}
   code={`
 function BasicUsage() {
@@ -238,7 +240,7 @@ Chakra provides 2 props for this use case:
     FormControl,
     FormLabel,
     Input,
-    ModalFooter,
+    ModalFooter
   }}
   code={`
 function InitialFocus() {
@@ -301,7 +303,7 @@ By default, the modal closes when you click its overlay. You can set
     ModalCloseButton,
     ModalBody,
     Lorem,
-    ModalFooter,
+    ModalFooter
   }}
   code={`
 function ManualClose() {
@@ -351,7 +353,7 @@ pass the `isCentered` prop.
     ModalCloseButton,
     ModalBody,
     Lorem,
-    ModalFooter,
+    ModalFooter
   }}
   code={`
 function VerticallyCenter() {
@@ -395,7 +397,7 @@ passing a `motionPreset` prop, and set its value to either `slideInBottom`,
     ModalCloseButton,
     ModalBody,
     Lorem,
-    ModalFooter,
+    ModalFooter
   }}
   code={`
 function TransitionExample() {
@@ -453,7 +455,7 @@ If the content within the modal overflows beyond the viewport, you can use the
     ModalCloseButton,
     ModalBody,
     Lorem,
-    ModalFooter,
+    ModalFooter
   }}
   code={`
 function ScrollingExample() {
@@ -511,7 +513,7 @@ Pass the `size` prop if you need to adjust the size of the modal. Values can be
     ModalCloseButton,
     ModalBody,
     Lorem,
-    ModalFooter,
+    ModalFooter
   }}
   code={`
 function SizeExample() {

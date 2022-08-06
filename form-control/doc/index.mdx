@@ -1,24 +1,26 @@
+import { Playground } from '@divriots/dockit-react/playground'
+import { mdx } from '@mdx-js/react'
+import React from 'react'
+
+import Layout from '~/doc-layout'
+import { FormControl } from '~/form-control'
+import { Input } from '~/input'
+import { NumberInput } from '~/number-input'
+import { Radio } from '~/radio'
+import { Select } from '~/select'
+
 import {
-  FormLabel,
   FormHelperText,
-  RadioGroup,
+  FormLabel,
   HStack,
+  NumberDecrementStepper,
+  NumberIncrementStepper,
   NumberInputField,
   NumberInputStepper,
-  NumberIncrementStepper,
-  NumberDecrementStepper,
-} from '../src/index';
-import { FormControl } from '~/form-control';
-import { Input } from '~/input';
-import { Radio } from '~/radio';
-import { Select } from '~/select';
-import { NumberInput } from '~/number-input';
+  RadioGroup
+} from '../src/index'
 
-import React from 'react';
-import { mdx } from '@mdx-js/react';
-import { Playground } from '@divriots/dockit-react/playground';
-import Layout from '~/doc-layout';
-export default Layout;
+export default Layout
 
 # Form Control
 
@@ -35,8 +37,8 @@ import {
   FormControl,
   FormLabel,
   FormErrorMessage,
-  FormHelperText,
-} from '@chakra-ui/react';
+  FormHelperText
+} from '@chakra-ui/react'
 ```
 
 ## Usage
@@ -112,7 +114,7 @@ By passing the `isRequired` props, the `Input` field has `aria-required` set to
     NumberInputField,
     NumberInputStepper,
     NumberIncrementStepper,
-    NumberDecrementStepper,
+    NumberDecrementStepper
   }}
   code={`
 <FormControl id="amount">

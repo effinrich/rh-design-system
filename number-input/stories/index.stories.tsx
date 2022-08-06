@@ -1,49 +1,47 @@
-import { chakra } from '../src/index';
-import * as React from 'react';
-import Lorem from 'react-lorem-component';
-import { Button } from '../src/index';
-import { Input } from '../src/index';
-import { Stack } from '../src/index';
-import { useForm } from 'react-hook-form';
+import * as React from 'react'
+import { useForm } from 'react-hook-form'
+import Lorem from 'react-lorem-component'
+
+import { themeDecorator } from '../../story-layout/src/index'
 import {
+  Button,
+  chakra,
   FormControl,
   FormErrorMessage,
   FormHelperText,
   FormLabel,
-} from '../src/index';
-import { NumberInput } from '../src/index';
-import {
+  Input,
   NumberDecrementStepper,
   NumberIncrementStepper,
+  NumberInput,
   NumberInputField,
   NumberInputStepper,
-  useNumberInput,
-} from '../src/index';
-
-import { themeDecorator } from '../../story-layout/src/index';
+  Stack,
+  useNumberInput
+} from '../src/index'
 
 export default {
   title: 'NumberInput',
   decorators: [themeDecorator],
   parameters: {
-    layout: 'centered',
-  },
-};
+    layout: 'centered'
+  }
+}
 
 export const HookUsage = () => {
   const {
     getInputProps,
     getIncrementButtonProps,
     getDecrementButtonProps,
-    valueAsNumber,
+    valueAsNumber
   } = useNumberInput({
     step: 0.01,
     defaultValue: 1.53,
     min: 1,
     max: 6,
     precision: 2,
-    allowMouseWheel: true,
-  });
+    allowMouseWheel: true
+  })
 
   return (
     <>
@@ -56,28 +54,28 @@ export const HookUsage = () => {
       </chakra.div>
       <Lorem />
     </>
-  );
-};
+  )
+}
 
-const format = (val: string) => `$${val}`;
-const parse = (val: string) => val.replace(/^\$/, '');
+const format = (val: string) => `$${val}`
+const parse = (val: string) => val.replace(/^\$/, '')
 
 export const HookWithFormatAndParse = () => {
-  const [value, setValue] = React.useState<string>('1.53');
+  const [value, setValue] = React.useState<string>('1.53')
 
   const {
     getInputProps,
     getIncrementButtonProps,
     getDecrementButtonProps,
-    valueAsNumber,
+    valueAsNumber
   } = useNumberInput({
     step: 0.01,
     value: format(value),
     min: 1,
     max: 6,
     precision: 2,
-    onChange: (valueString) => setValue(parse(valueString)),
-  });
+    onChange: valueString => setValue(parse(valueString))
+  })
 
   return (
     <>
@@ -88,8 +86,8 @@ export const HookWithFormatAndParse = () => {
         <Button {...getDecrementButtonProps()}>-</Button>
       </chakra.div>
     </>
-  );
-};
+  )
+}
 
 export const usage = () => (
   <NumberInput max={50} min={10}>
@@ -99,7 +97,7 @@ export const usage = () => (
       <NumberDecrementStepper />
     </NumberInputStepper>
   </NumberInput>
-);
+)
 
 export const withMinAndMax = () => (
   <NumberInput defaultValue={15} min={10} max={20}>
@@ -109,7 +107,7 @@ export const withMinAndMax = () => (
       <NumberDecrementStepper />
     </NumberInputStepper>
   </NumberInput>
-);
+)
 
 export const withStep = () => (
   <NumberInput step={5} defaultValue={15} min={10} max={30}>
@@ -119,7 +117,7 @@ export const withStep = () => (
       <NumberDecrementStepper />
     </NumberInputStepper>
   </NumberInput>
-);
+)
 
 export const withPrecision = () => (
   <NumberInput defaultValue={15} precision={2} step={0.2}>
@@ -129,7 +127,7 @@ export const withPrecision = () => (
       <NumberDecrementStepper />
     </NumberInputStepper>
   </NumberInput>
-);
+)
 
 export const withClampValueDisabled = () => (
   <NumberInput defaultValue={15} max={30} clampValueOnBlur={false}>
@@ -139,7 +137,7 @@ export const withClampValueDisabled = () => (
       <NumberDecrementStepper />
     </NumberInputStepper>
   </NumberInput>
-);
+)
 
 export const allowOutOfRange = () => (
   <NumberInput
@@ -154,11 +152,11 @@ export const allowOutOfRange = () => (
       <NumberDecrementStepper />
     </NumberInputStepper>
   </NumberInput>
-);
+)
 
 export const inputSizes = () => (
   <Stack>
-    {['xs', 'sm', 'md', 'lg'].map((size) => (
+    {['xs', 'sm', 'md', 'lg'].map(size => (
       <NumberInput key={size} size={size} defaultValue={15} min={10}>
         <NumberInputField />
         <NumberInputStepper>
@@ -168,23 +166,23 @@ export const inputSizes = () => (
       </NumberInput>
     ))}
   </Stack>
-);
+)
 
 export const WithReactHookForm = () => {
   const { register, handleSubmit } = useForm({
     defaultValues: {
-      sales: 12,
-    },
-  });
+      sales: 12
+    }
+  })
 
-  const onSubmit = (data: any) => console.log(data);
+  const onSubmit = (data: any) => console.log(data)
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <NumberInput
         name="sales"
         onBlur={() => {
-          console.log('blurred');
+          console.log('blurred')
         }}
       >
         <NumberInputField ref={register} />
@@ -194,8 +192,8 @@ export const WithReactHookForm = () => {
         </NumberInputStepper>
       </NumberInput>
     </form>
-  );
-};
+  )
+}
 
 function FormError(props: any) {
   return (
@@ -208,11 +206,11 @@ function FormError(props: any) {
       borderRadius="sm"
       {...props}
     />
-  );
+  )
 }
 
 export const WithFormControl = () => {
-  const [isError, setIsError] = React.useState(false);
+  const [isError, setIsError] = React.useState(false)
 
   return (
     <Stack align="start">
@@ -228,7 +226,7 @@ export const WithFormControl = () => {
           min={10}
           defaultValue={20}
           onBlur={() => {
-            console.log('blurred');
+            console.log('blurred')
           }}
         >
           <NumberInputField />
@@ -239,7 +237,7 @@ export const WithFormControl = () => {
         </NumberInput>
         <FormHelperText>Keep it very short and sweet!</FormHelperText>
       </FormControl>
-      <Button onClick={() => setIsError((s) => !s)}>Toggle Invalid</Button>
+      <Button onClick={() => setIsError(s => !s)}>Toggle Invalid</Button>
     </Stack>
-  );
-};
+  )
+}

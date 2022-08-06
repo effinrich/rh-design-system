@@ -1,3 +1,4 @@
-import { theme } from '../src/index';
+import { theme } from '../src/index'
 
-export const complete_theme = () => theme;
+export default {}
+export const complete_theme = () => theme

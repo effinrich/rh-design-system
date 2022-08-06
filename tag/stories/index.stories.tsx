@@ -1,27 +1,27 @@
-import { AddIcon } from '../src/index';
-import * as React from 'react';
-import { Tag } from '../src/index';
-import {
-  TagLeftIcon,
-  TagLabel,
-  TagRightIcon,
-  TagCloseButton,
-} from '../src/index';
-import { chakra } from '../src/index';
-import { Avatar } from '../src/index';
-import { MdSettings } from 'react-icons/md';
+import * as React from 'react'
+import { MdSettings } from 'react-icons/md'
 
-import { themeDecorator } from '../../story-layout/src/index';
+import { themeDecorator } from '../../story-layout/src/index'
+import {
+  AddIcon,
+  Avatar,
+  chakra,
+  Tag,
+  TagCloseButton,
+  TagLabel,
+  TagLeftIcon,
+  TagRightIcon
+} from '../src/index'
 
 export default {
   title: 'Tag',
   decorators: [themeDecorator],
   parameters: {
-    layout: 'centered',
-  },
-};
+    layout: 'centered'
+  }
+}
 
-export const basic = () => <Tag>Gray</Tag>;
+export const basic = () => <Tag>Gray</Tag>
 
 export const withSizes = () => (
   <>
@@ -29,7 +29,7 @@ export const withSizes = () => (
     <Tag size="md">Gray</Tag>
     <Tag size="lg">Gray</Tag>
   </>
-);
+)
 
 /**
  * Pass the `colorScheme` prop to use any color in the theme object to
@@ -48,7 +48,7 @@ export const colorSchemes = () => (
       Gray
     </Tag>
   </>
-);
+)
 
 /**
  * The tag component can contain an Icon. This is done by using the `TagIcon` component.
@@ -61,7 +61,7 @@ export const withLeftIcon = () => (
     <TagLeftIcon w="12px" h="12px" as={AddIcon} />
     <TagLabel>Green</TagLabel>
   </Tag>
-);
+)
 
 export const withRightIcon = () => (
   <>
@@ -75,7 +75,7 @@ export const withRightIcon = () => (
       <TagRightIcon as={MdSettings} />
     </Tag>
   </>
-);
+)
 
 /**
  * Use the `TagCloseButton` to apply a close button to the tag component.
@@ -98,7 +98,7 @@ export const withCloseButton = () => (
       <TagCloseButton />
     </Tag>
   </>
-);
+)
 
 /**
  * Tag component can contain a custom element. This is done by placing the custom element
@@ -117,4 +117,4 @@ export const withCustomElement = () => (
     <TagLabel>Segun</TagLabel>
     <TagCloseButton />
   </Tag>
-);
+)

@@ -1,44 +1,46 @@
-import { chakra, PropsOf, useMultiStyleConfig } from '../src/index';
-import * as React from 'react';
-import { FormControl } from '../src/index';
+import * as React from 'react'
+
+import { themeDecorator } from '../../story-layout/src/index'
 import {
+  chakra,
+  FormControl,
   FormControlOptions,
   FormErrorIcon,
   FormErrorMessage,
   FormHelperText,
   FormLabel,
+  PropsOf,
   useFormControl,
-} from '../src/index';
-
-import { themeDecorator } from '../../story-layout/src/index';
+  useMultiStyleConfig
+} from '../src/index'
 
 export default {
   title: 'FormControl',
   decorators: [themeDecorator],
   parameters: {
-    layout: 'centered',
-  },
-};
+    layout: 'centered'
+  }
+}
 
-type OmittedTypes = 'disabled' | 'required' | 'readOnly' | 'size';
+type OmittedTypes = 'disabled' | 'required' | 'readOnly' | 'size'
 
 type InputProps = Omit<PropsOf<'input'>, OmittedTypes> &
   FormControlOptions & {
     // Input component as `size` by default so it resolves to `never`
     // Omitted it from types in Line 16 and added back here.
-    size?: string;
-  };
+    size?: string
+  }
 
 // Create an input that consumes useFormControl
-type Props = { focusBorderColor?: string; errorBorderColor?: string };
+type Props = { focusBorderColor?: string; errorBorderColor?: string }
 
 const Input = React.forwardRef<HTMLInputElement, InputProps & Props>(
   (props, ref) => {
-    const styles = useMultiStyleConfig('Input', props);
-    const inputProps = useFormControl<HTMLInputElement>(props);
-    return <chakra.input ref={ref} __css={styles.field} {...inputProps} />;
+    const styles = useMultiStyleConfig('Input', props)
+    const inputProps = useFormControl<HTMLInputElement>(props)
+    return <chakra.input ref={ref} __css={styles.field} {...inputProps} />
   }
-);
+)
 
 export const InputExample = () => (
   <FormControl id="first-name" isRequired isInvalid>
@@ -47,18 +49,18 @@ export const InputExample = () => (
     <FormHelperText>Keep it very short and sweet!</FormHelperText>
     <FormErrorMessage>Your First name is invalid</FormErrorMessage>
   </FormControl>
-);
+)
 
 type TextAreaProps = Omit<PropsOf<'textarea'>, OmittedTypes> &
-  FormControlOptions;
+  FormControlOptions
 
 const Textarea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
   (props, ref) => {
-    const styles = useMultiStyleConfig('Textarea', props);
-    const inputProps = useFormControl<HTMLTextAreaElement>(props);
-    return <chakra.textarea ref={ref} __css={styles} {...inputProps} />;
+    const styles = useMultiStyleConfig('Textarea', props)
+    const inputProps = useFormControl<HTMLTextAreaElement>(props)
+    return <chakra.textarea ref={ref} __css={styles} {...inputProps} />
   }
-);
+)
 
 export const TextAreaExample: React.FC = () => (
   <FormControl id="first-name" isInvalid>
@@ -70,17 +72,17 @@ export const TextAreaExample: React.FC = () => (
       Your First name is invalid
     </FormErrorMessage>
   </FormControl>
-);
+)
 
-type SelectProps = Omit<PropsOf<'select'>, OmittedTypes> & FormControlOptions;
+type SelectProps = Omit<PropsOf<'select'>, OmittedTypes> & FormControlOptions
 
 const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
   (props, ref) => {
-    const styles = useMultiStyleConfig('Select', props);
-    const inputProps = useFormControl<HTMLSelectElement>(props);
-    return <chakra.select ref={ref} __css={styles.field} {...inputProps} />;
+    const styles = useMultiStyleConfig('Select', props)
+    const inputProps = useFormControl<HTMLSelectElement>(props)
+    return <chakra.select ref={ref} __css={styles.field} {...inputProps} />
   }
-);
+)
 
 export const SelectExample: React.FC = () => (
   <FormControl id="first-name" isInvalid>
@@ -96,7 +98,7 @@ export const SelectExample: React.FC = () => (
       Your First name is invalid
     </FormErrorMessage>
   </FormControl>
-);
+)
 
 /**
  * You can style the label when the input is focused,
@@ -108,10 +110,10 @@ export const StylingFocus: React.FC = () => (
     <Input placeholder="First Name" width="100%" />
     <FormErrorMessage>Your First name is invalid</FormErrorMessage>
   </FormControl>
-);
+)
 
 export const FormLabelStandalone = () => (
   <FormLabel fontWeight="bold" color="blue">
     Not wrapperd by FormControl
   </FormLabel>
-);
+)

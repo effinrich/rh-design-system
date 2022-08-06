@@ -1,20 +1,22 @@
-import {
-  AlertDialogOverlay,
-  AlertDialogContent,
-  AlertDialogHeader,
-  AlertDialogBody,
-  AlertDialogFooter,
-  useDisclosure,
-  AlertDialogCloseButton,
-} from '../src/index';
-import { Button } from '~/button';
-import { AlertDialog } from '~/alert-dialog';
+import { Playground } from '@divriots/dockit-react/playground'
+import { mdx } from '@mdx-js/react'
+import React from 'react'
 
-import React from 'react';
-import { mdx } from '@mdx-js/react';
-import { Playground } from '@divriots/dockit-react/playground';
-import Layout from '~/doc-layout';
-export default Layout;
+import { AlertDialog } from '~/alert-dialog'
+import { Button } from '~/button'
+import Layout from '~/doc-layout'
+
+import {
+  AlertDialogBody,
+  AlertDialogCloseButton,
+  AlertDialogContent,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogOverlay,
+  useDisclosure
+} from '../src/index'
+
+export default Layout
 
 # Alert Dialog
 
@@ -37,11 +39,11 @@ Chakra UI exports 7 alert dialog related components.
 import {
   AlertDialog,
   AlertDialogBody,
+  AlertDialogContent,
   AlertDialogFooter,
   AlertDialogHeader,
-  AlertDialogContent,
-  AlertDialogOverlay,
-} from '@chakra-ui/react';
+  AlertDialogOverlay
+} from '@chakra-ui/react'
 ```
 
 ## Usage
@@ -61,7 +63,7 @@ to prevent users from accidentally confirming the destructive action.
     AlertDialogContent,
     AlertDialogHeader,
     AlertDialogBody,
-    AlertDialogFooter,
+    AlertDialogFooter
   }}
   code={`
 function AlertDialogExample() {
@@ -119,7 +121,7 @@ passing a `motionPreset` prop, and set its value to either `slideInBottom`,
     AlertDialogHeader,
     AlertDialogCloseButton,
     AlertDialogBody,
-    AlertDialogFooter,
+    AlertDialogFooter
   }}
   code={`
 function TransitionExample() {

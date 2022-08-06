@@ -1,4 +1,4 @@
-export * from './Switch';
-export { FormLabel } from '@chakra-ui/react';
-export { HStack } from '@chakra-ui/layout';
-export { chakra } from '@chakra-ui/system';
+export * from './Switch'
+export { HStack } from '@chakra-ui/layout'
+export { FormLabel } from '@chakra-ui/react'
+export { chakra } from '@chakra-ui/system'

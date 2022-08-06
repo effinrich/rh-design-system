@@ -1,18 +1,21 @@
-import { MinusIcon, AddIcon } from '../src/index';
+import { Playground } from '@divriots/dockit-react/playground'
+import { mdx } from '@mdx-js/react'
+import React from 'react'
+
+import { Accordion } from '~/accordion'
+import { Box } from '~/box'
+import Layout from '~/doc-layout'
+
 import {
-  AccordionItem,
   AccordionButton,
   AccordionIcon,
+  AccordionItem,
   AccordionPanel,
-} from '../src/index';
-import { Accordion } from '~/accordion';
-import { Box } from '~/box';
+  AddIcon,
+  MinusIcon
+} from '../src/index'
 
-import React from 'react';
-import { mdx } from '@mdx-js/react';
-import { Playground } from '@divriots/dockit-react/playground';
-import Layout from '~/doc-layout';
-export default Layout;
+export default Layout
 
 # Accordion
 
@@ -38,8 +41,8 @@ import {
   AccordionItem,
   AccordionButton,
   AccordionPanel,
-  AccordionIcon,
-} from '@chakra-ui/react';
+  AccordionIcon
+} from '@chakra-ui/react'
 ```
 
 ## Usage
@@ -57,7 +60,7 @@ the `up` and `down` arrow keys will move focus between accordion buttons.
     AccordionButton,
     Box,
     AccordionIcon,
-    AccordionPanel,
+    AccordionPanel
   }}
   code={`
 <Accordion>
@@ -112,7 +115,7 @@ items to be expanded at once.
     AccordionButton,
     Box,
     AccordionIcon,
-    AccordionPanel,
+    AccordionPanel
   }}
   code={`
 <Accordion defaultIndex={[0]} allowMultiple>
@@ -163,7 +166,7 @@ If you set `allowToggle` to `true`, any expanded item may be collapsed again.
     AccordionButton,
     Box,
     AccordionIcon,
-    AccordionPanel,
+    AccordionPanel
   }}
   code={`
 <Accordion allowToggle>
@@ -216,7 +219,7 @@ style this state.
     AccordionButton,
     Box,
     AccordionIcon,
-    AccordionPanel,
+    AccordionPanel
   }}
   code={`
 <Accordion>
@@ -254,7 +257,7 @@ render prop. It provides 2 internal state props: `isExpanded` and `isDisabled`.
     AccordionIcon,
     AccordionPanel,
     MinusIcon,
-    AddIcon,
+    AddIcon
   }}
   code={`
 <Accordion allowMultiple>

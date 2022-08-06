@@ -1,7 +1,7 @@
-export * from './List';
+export * from './List'
 export {
-  UnorderedList,
+  ListIcon,
   ListItem,
   OrderedList,
-  ListIcon,
-} from '@chakra-ui/react';
+  UnorderedList
+} from '@chakra-ui/react'

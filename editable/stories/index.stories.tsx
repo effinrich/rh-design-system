@@ -1,22 +1,22 @@
-import { chakra } from '../src/index';
-import * as React from 'react';
-import { useEditable } from '../src/index';
-import { Editable } from '../src/index';
+import * as React from 'react'
+
+import { themeDecorator } from '../../story-layout/src/index'
 import {
+  chakra,
+  Editable,
   EditableInput,
   EditablePreview,
-  useEditableControls,
-} from '../src/index';
-
-import { themeDecorator } from '../../story-layout/src/index';
+  useEditable,
+  useEditableControls
+} from '../src/index'
 
 export default {
   title: 'Editable',
   decorators: [themeDecorator],
   parameters: {
-    layout: 'centered',
-  },
-};
+    layout: 'centered'
+  }
+}
 
 export const UseEditableHook = () => {
   const {
@@ -26,13 +26,13 @@ export const UseEditableHook = () => {
     getSubmitButtonProps,
     isValueEmpty,
     isEditing,
-    onEdit,
+    onEdit
   } = useEditable({
     placeholder: 'Title...',
     submitOnBlur: true,
     onCancel: () => console.log('cancel'),
-    onSubmit: () => console.log('submit'),
-  });
+    onSubmit: () => console.log('submit')
+  })
 
   return (
     <>
@@ -54,16 +54,16 @@ export const UseEditableHook = () => {
         </>
       )}
     </>
-  );
-};
+  )
+}
 
 const EditableControls = () => {
   const {
     isEditing,
     getEditButtonProps,
     getSubmitButtonProps,
-    getCancelButtonProps,
-  } = useEditableControls();
+    getCancelButtonProps
+  } = useEditableControls()
 
   return (
     <div>
@@ -76,8 +76,8 @@ const EditableControls = () => {
         </>
       )}
     </div>
-  );
-};
+  )
+}
 
 export const Basic = () => (
   <Editable
@@ -92,7 +92,7 @@ export const Basic = () => (
     <EditableInput />
     <EditableControls />
   </Editable>
-);
+)
 
 export const CodeSandboxTopbar = () => {
   return (
@@ -104,5 +104,5 @@ export const CodeSandboxTopbar = () => {
         <EditablePreview />
       </Editable>
     </chakra.div>
-  );
-};
+  )
+}

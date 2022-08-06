@@ -1,11 +1,11 @@
-export * from './Tabs';
+export * from './Tabs'
+export { useInterval } from '@chakra-ui/hooks'
 export {
-  TabList,
   Tab,
-  TabPanels,
-  TabPanel,
-  useColorModeValue,
   TabIndicator,
-} from '@chakra-ui/react';
-export { chakra } from '@chakra-ui/system';
-export { useInterval } from '@chakra-ui/hooks';
+  TabList,
+  TabPanel,
+  TabPanels,
+  useColorModeValue
+} from '@chakra-ui/react'
+export { chakra } from '@chakra-ui/system'

@@ -1,32 +1,30 @@
-import { HStack } from '../src/index';
-import { chakra } from '../src/index';
-import * as React from 'react';
-import { useForm } from 'react-hook-form';
-import { Switch } from '../src/index';
+import * as React from 'react'
+import { useForm } from 'react-hook-form'
 
-import { themeDecorator } from '../../story-layout/src/index';
+import { themeDecorator } from '../../story-layout/src/index'
+import { chakra, HStack, Switch } from '../src/index'
 
 export default {
   title: 'Switch',
   decorators: [themeDecorator],
   parameters: {
-    layout: 'centered',
-  },
-};
+    layout: 'centered'
+  }
+}
 
-export const Base = () => <Switch colorScheme="green" />;
+export const Base = () => <Switch colorScheme="green" />
 
 export const Disabled = () => (
   <Switch isDisabled size="md" colorScheme="blue" margin="20px" />
-);
+)
 
 export const Readonly = () => (
   <Switch isReadOnly size="md" colorScheme="blue" margin="20px" />
-);
+)
 
 export const Invalid = () => (
   <Switch isInvalid size="md" colorScheme="blue" margin="20px" />
-);
+)
 
 export const Usage = () => (
   <chakra.div display="flex" justifyContent="center" alignItems="center">
@@ -35,7 +33,7 @@ export const Usage = () => (
     </chakra.label>
     <Switch colorScheme="green" id="email-alerts" />
   </chakra.div>
-);
+)
 
 export const Sizes = () => {
   return (
@@ -44,11 +42,11 @@ export const Sizes = () => {
       <Switch size="md" colorScheme="green" />
       <Switch size="lg" colorScheme="green" />
     </HStack>
-  );
-};
+  )
+}
 
 export const Controlled = () => {
-  const [checked, setChecked] = React.useState(true);
+  const [checked, setChecked] = React.useState(true)
 
   return (
     <>
@@ -56,25 +54,25 @@ export const Controlled = () => {
       <Switch
         isChecked={checked}
         colorScheme="blue"
-        onChange={(e) => setChecked(e.target.checked)}
+        onChange={e => setChecked(e.target.checked)}
       />
     </>
-  );
-};
+  )
+}
 
 export const WithReactHookForm = () => {
   const defaultValues = {
     name: 'Hello',
     boolean: true,
-    test: true,
-  };
+    test: true
+  }
 
   const { handleSubmit, register } = useForm({
-    defaultValues,
-  });
+    defaultValues
+  })
 
   function onSubmit(values) {
-    alert(JSON.stringify(values, null, 2));
+    alert(JSON.stringify(values, null, 2))
   }
 
   return (
@@ -84,5 +82,5 @@ export const WithReactHookForm = () => {
       <Switch {...register('boolean', { required: true })} />
       <button type="submit">Submit</button>
     </form>
-  );
-};
+  )
+}

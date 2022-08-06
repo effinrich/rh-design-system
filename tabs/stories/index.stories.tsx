@@ -1,18 +1,24 @@
-import { chakra } from '../src/index';
-import { useInterval } from '../src/index';
-import * as React from 'react';
-import { Tabs } from '../src/index';
-import { Tab, TabIndicator, TabList, TabPanel, TabPanels } from '../src/index';
+import * as React from 'react'
 
-import { themeDecorator } from '../../story-layout/src/index';
+import { themeDecorator } from '../../story-layout/src/index'
+import {
+  chakra,
+  Tab,
+  TabIndicator,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
+  useInterval
+} from '../src/index'
 
 export default {
   title: 'Tabs',
   decorators: [themeDecorator],
   parameters: {
-    layout: 'centered',
-  },
-};
+    layout: 'centered'
+  }
+}
 
 export const automatic = () => (
   <>
@@ -48,7 +54,7 @@ export const automatic = () => (
       </TabPanels>
     </Tabs>
   </>
-);
+)
 
 export const manual = () => (
   <Tabs isManual>
@@ -65,7 +71,7 @@ export const manual = () => (
       <TabPanel>Shut Down</TabPanel>
     </TabPanels>
   </Tabs>
-);
+)
 
 export const withIndicator = () => (
   <Tabs variant="unstyled" isManual>
@@ -87,7 +93,7 @@ export const withIndicator = () => (
       <TabPanel>Shut Down</TabPanel>
     </TabPanels>
   </Tabs>
-);
+)
 
 export const withVerticalTabs = () => (
   <Tabs orientation="vertical">
@@ -104,17 +110,17 @@ export const withVerticalTabs = () => (
       <TabPanel>Shut Down</TabPanel>
     </TabPanels>
   </Tabs>
-);
+)
 
 const Interval = () => {
-  const [value, setValue] = React.useState(0);
-  useInterval(() => setValue((v) => v + 1), 1000);
+  const [value, setValue] = React.useState(0)
+  useInterval(() => setValue(v => v + 1), 1000)
   return (
     <span style={{ fontWeight: 'bold', color: 'tomato', padding: 4 }}>
       {value}
     </span>
-  );
-};
+  )
+}
 
 export const withLazyTabs = () => (
   <Tabs isLazy>
@@ -133,7 +139,7 @@ export const withLazyTabs = () => (
       </TabPanel>
     </TabPanels>
   </Tabs>
-);
+)
 
 export const withLazyTabsMounted = () => (
   <Tabs isLazy lazyBehavior="keepMounted">
@@ -152,30 +158,30 @@ export const withLazyTabsMounted = () => (
       </TabPanel>
     </TabPanels>
   </Tabs>
-);
+)
 
 export const WithSwappedTabs = () => {
   const initialData = [
     { id: 'a', value: 1 },
-    { id: 'b', value: 5 },
-  ];
+    { id: 'b', value: 5 }
+  ]
 
   const TabView: React.FC<{
-    items: typeof initialData;
-    selectedItemId: string;
-    setSelectedItemId: (id: string) => void;
+    items: typeof initialData
+    selectedItemId: string
+    setSelectedItemId: (id: string) => void
   }> = ({ items, selectedItemId, setSelectedItemId }) => {
     // Derive current tab index from id
     const tabIndex = React.useMemo(() => {
-      return items.findIndex((x) => x.id === selectedItemId);
-    }, [items, selectedItemId]);
+      return items.findIndex(x => x.id === selectedItemId)
+    }, [items, selectedItemId])
 
     // Update current selected item id
     const onTabChange = (idx: number) => {
-      console.log('onTabChange', idx, items[idx].id);
-      const { id } = items[idx];
-      setSelectedItemId(id);
-    };
+      console.log('onTabChange', idx, items[idx].id)
+      const { id } = items[idx]
+      setSelectedItemId(id)
+    }
 
     return (
       <Tabs
@@ -185,37 +191,37 @@ export const WithSwappedTabs = () => {
         variant="enclosed-colored"
       >
         <TabList minW="100px">
-          {items.map((x) => (
+          {items.map(x => (
             <Tab key={x.id}>
               {x.id}: {x.value}
             </Tab>
           ))}
         </TabList>
         <TabPanels>
-          {items.map((x) => (
+          {items.map(x => (
             <TabPanel key={x.id}>
               {x.id}: {x.value}
             </TabPanel>
           ))}
         </TabPanels>
       </Tabs>
-    );
-  };
+    )
+  }
 
-  const [items, setItems] = React.useState(initialData);
-  const [selectedItemId, setSelectedItemId] = React.useState('a');
+  const [items, setItems] = React.useState(initialData)
+  const [selectedItemId, setSelectedItemId] = React.useState('a')
 
   const swapData = () => {
-    setItems((items) => {
-      const [a, b] = items;
-      return [b, a];
-    });
-  };
+    setItems(items => {
+      const [a, b] = items
+      return [b, a]
+    })
+  }
 
   console.log(
     { selectedItemId },
-    items.map((x) => x.id)
-  );
+    items.map(x => x.id)
+  )
 
   return (
     <chakra.div m={4}>
@@ -226,5 +232,5 @@ export const WithSwappedTabs = () => {
         setSelectedItemId={setSelectedItemId}
       />
     </chakra.div>
-  );
-};
+  )
+}

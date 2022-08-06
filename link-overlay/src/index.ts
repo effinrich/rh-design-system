@@ -1,2 +1,2 @@
-export * from './LinkOverlay';
-export { LinkBox, Heading, Text } from '@chakra-ui/react';
+export * from './LinkOverlay'
+export { Heading, LinkBox, Text } from '@chakra-ui/react'

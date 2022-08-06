@@ -1,13 +1,15 @@
-import merge from 'deepmerge';
-import space from '~/space/src';
-import sizes from '~/sizes/src';
-import typography from '~/typography/src';
-import colors from '~/colors/src';
-import shadows from '~/shadows/src';
-import radii from '~/radii/src';
-import borders from '~/border/src';
-import zIndices from '~/z-index/src';
-import mdx from './mdx';
+import merge from 'deepmerge'
+
+import mdx from './mdx'
+
+import borders from '~/border/src'
+import colors from '~/colors/src'
+import radii from '~/radii/src'
+import shadows from '~/shadows/src'
+import sizes from '~/sizes/src'
+import space from '~/space/src'
+import typography from '~/typography/src'
+import zIndices from '~/z-index/src'
 
 export const theme = merge.all(
   [
@@ -19,7 +21,7 @@ export const theme = merge.all(
     { radii },
     { borders },
     { zIndices },
-    { mdx },
+    { mdx }
   ],
   { arrayMerge: (t, s) => [...s, ...t] }
-);
+)

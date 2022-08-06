@@ -1,14 +1,16 @@
-import { useToast, WrapItem } from '../src/index';
-import { Button } from '~/button';
-import { Box } from '~/box';
-import { Stack } from '~/stack';
-import { Wrap } from '~/wrap';
+import { Playground } from '@divriots/dockit-react/playground'
+import { mdx } from '@mdx-js/react'
+import React from 'react'
 
-import React from 'react';
-import { mdx } from '@mdx-js/react';
-import { Playground } from '@divriots/dockit-react/playground';
-import Layout from '~/doc-layout';
-export default Layout;
+import { Box } from '~/box'
+import { Button } from '~/button'
+import Layout from '~/doc-layout'
+import { Stack } from '~/stack'
+import { Wrap } from '~/wrap'
+
+import { useToast, WrapItem } from '../src/index'
+
+export default Layout
 
 # Toast
 
@@ -24,7 +26,7 @@ time.
 ## Import
 
 ```js
-import { useToast } from '@chakra-ui/react';
+import { useToast } from '@chakra-ui/react'
 ```
 
 ## Usage
@@ -242,22 +244,22 @@ to call `toast(...)`.
 
 ```jsx live=false
 function PreventDuplicateExample() {
-  const toast = useToast();
-  const id = 'test-toast';
+  const toast = useToast()
+  const id = 'test-toast'
   return (
     <Button
       onClick={() => {
         if (!toast.isActive(id)) {
           toast({
             id,
-            title: 'Hey! You can create a duplicate toast',
-          });
+            title: 'Hey! You can create a duplicate toast'
+          })
         }
       }}
     >
       Click me!
     </Button>
-  );
+  )
 }
 ```
 
@@ -267,9 +269,9 @@ Use `createStandaloneToast` to create toasts from outside of your React
 Components.
 
 ```js
-import { createStandaloneToast } from '@chakra-ui/react';
+import { createStandaloneToast } from '@chakra-ui/react'
 
-const toast = createStandaloneToast();
+const toast = createStandaloneToast()
 // const customToast = createStandaloneToast({ theme: yourCustomTheme })
 
 toast({
@@ -277,6 +279,6 @@ toast({
   description: 'Unable to create user account.',
   status: 'error',
   duration: 9000,
-  isClosable: true,
-});
+  isClosable: true
+})
 ```

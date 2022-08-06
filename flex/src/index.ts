@@ -1,2 +1,2 @@
-export * from './Flex';
-export { Text, Square, Spacer, HStack, Heading } from '@chakra-ui/react';
+export * from './Flex'
+export { Heading, HStack, Spacer, Square, Text } from '@chakra-ui/react'

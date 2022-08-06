@@ -1,22 +1,22 @@
-import { chakra } from '../src/index';
-import * as React from 'react';
-import { Slider } from '../src/index';
+import * as React from 'react'
+
+import { themeDecorator } from '../../story-layout/src/index'
 import {
+  chakra,
+  Slider,
+  SliderFilledTrack,
   SliderMark,
   SliderThumb,
-  SliderTrack,
-  SliderFilledTrack,
-} from '../src/index';
-
-import { themeDecorator } from '../../story-layout/src/index';
+  SliderTrack
+} from '../src/index'
 
 export default {
   title: 'Slider',
   decorators: [themeDecorator],
   parameters: {
-    layout: 'centered',
-  },
-};
+    layout: 'centered'
+  }
+}
 
 export const SliderBug = () => {
   return (
@@ -33,12 +33,12 @@ export const SliderBug = () => {
       </SliderTrack>
       <SliderThumb boxSize={6} />
     </Slider>
-  );
-};
+  )
+}
 
 export const SliderOnChangeBug = () => {
-  const [value, setValue] = React.useState(10);
-  const [counter, setCounter] = React.useState(0);
+  const [value, setValue] = React.useState(10)
+  const [counter, setCounter] = React.useState(0)
 
   return (
     <div>
@@ -47,9 +47,9 @@ export const SliderOnChangeBug = () => {
         max={20}
         step={5}
         value={value}
-        onChange={(value) => {
-          setCounter((c) => c + 1);
-          setValue(value);
+        onChange={value => {
+          setCounter(c => c + 1)
+          setValue(value)
         }}
       >
         <SliderTrack bg="red.100">
@@ -60,8 +60,8 @@ export const SliderOnChangeBug = () => {
       <chakra.div mt="10px">Value: {value}</chakra.div>
       <chakra.div mt="10px">Change Count: {counter}</chakra.div>
     </div>
-  );
-};
+  )
+}
 
 export function HorizontalSlider() {
   return (
@@ -74,7 +74,7 @@ export function HorizontalSlider() {
         "90%"
       </SliderMark>
     </Slider>
-  );
+  )
 }
 
 export function VerticalSlider() {
@@ -86,7 +86,7 @@ export function VerticalSlider() {
       <SliderThumb />
       <SliderMark value={90} children="90%" left="40px" />
     </Slider>
-  );
+  )
 }
 
 export function ChakraHorizontalSlider() {
@@ -97,11 +97,11 @@ export function ChakraHorizontalSlider() {
       </SliderTrack>
       <SliderThumb children="#" boxSize="30px" color="black" />
     </Slider>
-  );
+  )
 }
 
 export function SteppedHorizontalSlider() {
-  const [value, setValue] = React.useState<number>(1);
+  const [value, setValue] = React.useState<number>(1)
   return (
     <Slider value={value} onChange={setValue} min={1} max={7} step={2}>
       <SliderTrack>
@@ -109,5 +109,5 @@ export function SteppedHorizontalSlider() {
       </SliderTrack>
       <SliderThumb children={value} boxSize="30px" color="black" />
     </Slider>
-  );
+  )
 }

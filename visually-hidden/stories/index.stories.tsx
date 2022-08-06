@@ -1,26 +1,25 @@
-import * as React from 'react';
-import { VisuallyHidden } from '../src/index';
-import { VisuallyHiddenInput } from '../src/index';
+import * as React from 'react'
 
-import { themeDecorator } from '../../story-layout/src/index';
+import { themeDecorator } from '../../story-layout/src/index'
+import { VisuallyHidden, VisuallyHiddenInput } from '../src/index'
 
 export default {
   title: 'Visually Hidden',
   decorators: [themeDecorator],
   parameters: {
-    layout: 'centered',
-  },
-};
+    layout: 'centered'
+  }
+}
 
-export const hiddenSpan = () => (
+export const HiddenSpan = () => (
   <VisuallyHidden>This is visually hidden</VisuallyHidden>
-);
+)
 
-export const hiddenInput = () => (
+export const HiddenInput = () => (
   <VisuallyHiddenInput
     defaultChecked
-    onChange={(event) => {
-      console.log(event.target.checked);
+    onChange={event => {
+      console.log(event.target.checked)
     }}
   />
-);
+)

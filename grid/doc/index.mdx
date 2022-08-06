@@ -1,12 +1,14 @@
-import { GridItem } from '../src/index';
-import { Grid } from '~/grid';
-import { Box } from '~/box';
+import { Playground } from '@divriots/dockit-react/playground'
+import { mdx } from '@mdx-js/react'
+import React from 'react'
 
-import React from 'react';
-import { mdx } from '@mdx-js/react';
-import { Playground } from '@divriots/dockit-react/playground';
-import Layout from '~/doc-layout';
-export default Layout;
+import { Box } from '~/box'
+import Layout from '~/doc-layout'
+import { Grid } from '~/grid'
+
+import { GridItem } from '../src/index'
+
+export default Layout
 
 # Grid
 
@@ -16,7 +18,7 @@ comes with helpful style shorthand. It renders a `div` element.
 ## Import
 
 ```js
-import { Grid, GridItem } from '@chakra-ui/react';
+import { Grid, GridItem } from '@chakra-ui/react'
 ```
 
 - **Grid:** The main wrapper with `display: grid`.

@@ -1,10 +1,10 @@
-export * from './AlertDialog';
+export * from './AlertDialog'
 export {
-  AlertDialogOverlay,
-  AlertDialogContent,
-  AlertDialogHeader,
   AlertDialogBody,
-  AlertDialogFooter,
-  useDisclosure,
   AlertDialogCloseButton,
-} from '@chakra-ui/react';
+  AlertDialogContent,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogOverlay,
+  useDisclosure
+} from '@chakra-ui/react'

@@ -1,2 +1,2 @@
-export * from './Divider';
-export { Text } from '@chakra-ui/react';
+export * from './Divider'
+export { Text } from '@chakra-ui/react'

@@ -1,18 +1,16 @@
-import * as React from 'react';
-import { Avatar } from '../src/index';
-import { AvatarBadge, AvatarGroup } from '../src/index';
-import { Stack, Box } from '../src/index';
-import type { PropsOf } from '../src/index';
+import * as React from 'react'
 
-import { themeDecorator } from '../../story-layout/src/index';
+import { themeDecorator } from '../../story-layout/src/index'
+import type { PropsOf } from '../src/index'
+import { Avatar, AvatarBadge, AvatarGroup, Box, Stack } from '../src/index'
 
 export default {
   title: 'Avatar',
   decorators: [themeDecorator],
   parameters: {
-    layout: 'centered',
-  },
-};
+    layout: 'centered'
+  }
+}
 
 export const Basic = () => (
   <Stack direction="row">
@@ -20,7 +18,7 @@ export const Basic = () => (
     <Avatar name="Christian Nwamba" src="https://bit.ly/code-beast" />
     <Avatar name="Segun Adebayo" src="https://bit.ly/sage-adebayo" />
   </Stack>
-);
+)
 
 /**
  * You can use a custom generic avatar instead of
@@ -39,7 +37,7 @@ const GenericAvatar = (props: PropsOf<'svg'>) => (
       fillRule="nonzero"
     />
   </svg>
-);
+)
 
 /**
  * Without a `src` or `name` attribute, the avatar
@@ -50,7 +48,7 @@ export const WithCustomIcon = () => (
     <Avatar icon={<GenericAvatar />} />
     <Avatar />
   </AvatarGroup>
-);
+)
 
 /**
  * You can change the size of the avatar
@@ -58,7 +56,7 @@ export const WithCustomIcon = () => (
  */
 export const WithSizes = () => (
   <Stack direction="row" spacing="24px">
-    {['xs', 'sm', 'md', 'lg', 'xl', '2xl'].map((size) => (
+    {['xs', 'sm', 'md', 'lg', 'xl', '2xl'].map(size => (
       <Avatar
         key={size}
         size={size}
@@ -69,7 +67,7 @@ export const WithSizes = () => (
       </Avatar>
     ))}
   </Stack>
-);
+)
 
 /**
  * Use the AvatarGroup component to stack
@@ -82,4 +80,4 @@ export const avatarGroup = () => (
     <Avatar name="Prosper Otemuyiwa" src="https://bit.ly/prosper-baba" />
     <Avatar name="Christian Nwamba" src="https://bit.ly/code-beast" />
   </AvatarGroup>
-);
+)

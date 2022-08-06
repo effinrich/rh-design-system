@@ -1,17 +1,18 @@
-import { Button } from '../src/index';
-import { Image } from '../src/index';
-import { Portal } from '../src/index';
-import { chakra } from '../src/index';
-import * as React from 'react';
+import * as React from 'react'
 import {
   FaChevronDown,
   FaSearch,
   FaTruck,
   FaUndoAlt,
-  FaUnlink,
-} from 'react-icons/fa';
-import { Menu } from '../src/index';
+  FaUnlink
+} from 'react-icons/fa'
+
+import { themeDecorator } from '../../story-layout/src/index'
 import {
+  Button,
+  chakra,
+  Image,
+  Menu,
   MenuButton,
   MenuDivider,
   MenuGroup,
@@ -19,16 +20,16 @@ import {
   MenuItemOption,
   MenuList,
   MenuOptionGroup,
-  useMenuItem,
-} from '../src/index';
-import { themeDecorator } from '../../story-layout/src/index';
+  Portal,
+  useMenuItem
+} from '../src/index'
 
 export default {
   decorators: [themeDecorator],
   parameters: {
-    layout: 'centered',
-  },
-};
+    layout: 'centered'
+  }
+}
 
 const words = [
   'About Visual Studio Code',
@@ -36,15 +37,15 @@ const words = [
   'Preferences',
   'Services',
   'Hide Visual Studio Code',
-  'Show All',
-];
+  'Show All'
+]
 
 function logEvents(e: React.MouseEvent | React.KeyboardEvent | undefined) {
   if (e && e.persist) {
     // Stop react from complaining about unpersisted events.
-    e.persist();
+    e.persist()
   }
-  console.log(e);
+  console.log(e)
 }
 
 export const Basic = () => (
@@ -60,7 +61,7 @@ export const Basic = () => (
         Open Wakanda menu
       </MenuButton>
       <MenuList>
-        {words.map((word) => (
+        {words.map(word => (
           <MenuItem key={word} onClick={logEvents}>
             {word}
           </MenuItem>
@@ -68,20 +69,20 @@ export const Basic = () => (
       </MenuList>
     </Menu>
   </div>
-);
+)
 
 export const LazyMenu = () => (
   <Menu isLazy>
     <MenuButton as={Button}>Open Wakanda menu</MenuButton>
     <MenuList>
-      {words.map((word) => (
+      {words.map(word => (
         <MenuItem key={word} onClick={logEvents}>
           {word}
         </MenuItem>
       ))}
     </MenuList>
   </Menu>
-);
+)
 
 export const WithDisabledItem = () => (
   <>
@@ -117,7 +118,7 @@ export const WithDisabledItem = () => (
       </MenuList>
     </Menu>
   </>
-);
+)
 
 export const WithDisabledButFocusableItem = () => (
   <Menu>
@@ -133,33 +134,33 @@ export const WithDisabledButFocusableItem = () => (
       <MenuItem>Menu 4</MenuItem>
     </MenuList>
   </Menu>
-);
+)
 
 export const WithTogglableMenuItems = () => {
   const [items, setItems] = React.useState<
     {
-      content: string;
-      icon: React.ReactElement;
-      isDisabled?: boolean;
-      command?: string;
+      content: string
+      icon: React.ReactElement
+      isDisabled?: boolean
+      command?: string
     }[]
   >([
     {
       content: 'Search',
       icon: <FaSearch />,
       isDisabled: true,
-      command: '⌥T',
+      command: '⌥T'
     },
     {
       content: 'Delivery',
-      icon: <FaUndoAlt />,
+      icon: <FaUndoAlt />
     },
     {
       content: 'Unlink',
       icon: <FaUnlink />,
-      isDisabled: true,
-    },
-  ]);
+      isDisabled: true
+    }
+  ])
 
   return (
     <>
@@ -170,18 +171,18 @@ export const WithTogglableMenuItems = () => {
               content: 'Search',
               icon: <FaSearch />,
               isDisabled: false,
-              command: '⌥T',
+              command: '⌥T'
             },
             {
               content: 'Delivery',
-              icon: <FaUndoAlt />,
+              icon: <FaUndoAlt />
             },
             {
               content: 'Unlink',
               icon: <FaUnlink />,
-              isDisabled: true,
-            },
-          ]);
+              isDisabled: true
+            }
+          ])
         }}
       >
         Enable Search
@@ -204,8 +205,8 @@ export const WithTogglableMenuItems = () => {
         </MenuList>
       </Menu>
     </>
-  );
-};
+  )
+}
 
 export const WithPortal = () => (
   <Menu>
@@ -221,7 +222,7 @@ export const WithPortal = () => (
       </MenuList>
     </Portal>
   </Menu>
-);
+)
 
 export const withGroupedItems = () => (
   <Menu>
@@ -239,7 +240,7 @@ export const withGroupedItems = () => (
       </MenuGroup>
     </MenuList>
   </Menu>
-);
+)
 
 export const withMenuRadio = () => (
   <Menu closeOnSelect={false}>
@@ -266,7 +267,7 @@ export const withMenuRadio = () => (
       </MenuOptionGroup>
     </MenuList>
   </Menu>
-);
+)
 
 export const WithInternalState = () => (
   <Menu>
@@ -282,7 +283,7 @@ export const WithInternalState = () => (
       </>
     )}
   </Menu>
-);
+)
 
 export const WithLetterNavigation = () => (
   <Menu>
@@ -306,7 +307,7 @@ export const WithLetterNavigation = () => (
       <MenuItem>Save File</MenuItem>
     </MenuList>
   </Menu>
-);
+)
 
 export const JustAnotherExample = () => (
   <Menu>
@@ -334,7 +335,7 @@ export const JustAnotherExample = () => (
       </MenuItem>
     </MenuList>
   </Menu>
-);
+)
 
 export const WithLink = () => (
   <Menu>
@@ -349,7 +350,7 @@ export const WithLink = () => (
       </MenuItem>
     </MenuList>
   </Menu>
-);
+)
 
 export const SplitButton = () => (
   <chakra.div display="flex">
@@ -373,7 +374,7 @@ export const SplitButton = () => (
       </MenuList>
     </Menu>
   </chakra.div>
-);
+)
 
 export const WithinForm = () => {
   return (
@@ -394,8 +395,8 @@ export const WithinForm = () => {
         </Menu>
       </fieldset>
     </form>
-  );
-};
+  )
+}
 
 export const GroupWithDivider = () => {
   return (
@@ -412,8 +413,8 @@ export const GroupWithDivider = () => {
         </MenuOptionGroup>
       </MenuList>
     </Menu>
-  );
-};
+  )
+}
 
 export const WithCloseOnSelect = () => (
   <Menu>
@@ -430,16 +431,16 @@ export const WithCloseOnSelect = () => (
       </MenuOptionGroup>
     </MenuList>
   </Menu>
-);
+)
 
 const MenuItemWithInput = (props: any) => {
-  const { role: _, ...rest } = useMenuItem(props);
+  const { role: _, ...rest } = useMenuItem(props)
   return (
     <div>
       <input {...rest} />
     </div>
-  );
-};
+  )
+}
 
 export const MenuWithInput = () => {
   return (
@@ -453,5 +454,5 @@ export const MenuWithInput = () => {
         <MenuItem>Menu 4</MenuItem>
       </MenuList>
     </Menu>
-  );
-};
+  )
+}

@@ -1,31 +1,33 @@
-import { EditIcon } from '../src/index';
-import {
-  PopoverTrigger,
-  PopoverContent,
-  PopoverArrow,
-  PopoverCloseButton,
-  PopoverHeader,
-  PopoverBody,
-  Portal,
-  PopoverFooter,
-  ButtonGroup,
-  FormLabel,
-  useDisclosure,
-} from '../src/index';
-import FocusLock from 'react-focus-lock';
-import { Popover } from '~/popover';
-import { Button } from '~/button';
-import { Box } from '~/box';
-import { FormControl } from '~/form-control';
-import { Input } from '~/input';
-import { Stack } from '~/stack';
-import { IconButton } from '~/icon-button';
+import { Playground } from '@divriots/dockit-react/playground'
+import { mdx } from '@mdx-js/react'
+import React from 'react'
+import FocusLock from 'react-focus-lock'
 
-import React from 'react';
-import { mdx } from '@mdx-js/react';
-import { Playground } from '@divriots/dockit-react/playground';
-import Layout from '~/doc-layout';
-export default Layout;
+import { Box } from '~/box'
+import { Button } from '~/button'
+import Layout from '~/doc-layout'
+import { FormControl } from '~/form-control'
+import { IconButton } from '~/icon-button'
+import { Input } from '~/input'
+import { Popover } from '~/popover'
+import { Stack } from '~/stack'
+
+import {
+  ButtonGroup,
+  EditIcon,
+  FormLabel,
+  PopoverArrow,
+  PopoverBody,
+  PopoverCloseButton,
+  PopoverContent,
+  PopoverFooter,
+  PopoverHeader,
+  PopoverTrigger,
+  Portal,
+  useDisclosure
+} from '../src/index'
+
+export default Layout
 
 # Popover
 
@@ -55,8 +57,8 @@ import {
   PopoverBody,
   PopoverFooter,
   PopoverArrow,
-  PopoverCloseButton,
-} from '@chakra-ui/react';
+  PopoverCloseButton
+} from '@chakra-ui/react'
 ```
 
 ## Basic Usage
@@ -77,7 +79,7 @@ is critical for accessiblity.
     PopoverArrow,
     PopoverCloseButton,
     PopoverHeader,
-    PopoverBody,
+    PopoverBody
   }}
   code={`
 <Popover>
@@ -113,7 +115,7 @@ portal, wrap the `PopoverContent` in a `Portal`
     PopoverHeader,
     PopoverCloseButton,
     PopoverBody,
-    PopoverFooter,
+    PopoverFooter
   }}
   code={`
 <Popover>
@@ -152,7 +154,7 @@ By default, focus is to sent to `PopoverContent` when it opens. Pass the
     PopoverBody,
     PopoverFooter,
     Box,
-    ButtonGroup,
+    ButtonGroup
   }}
   code={`
 function WalkthroughPopover() {
@@ -224,7 +226,7 @@ within the `PopoverContent`.
     PopoverContent,
     FocusLock,
     PopoverArrow,
-    PopoverCloseButton,
+    PopoverCloseButton
   }}
   noInline={true}
   code={`
@@ -314,7 +316,7 @@ prevent popver from returning focus to `PopoverTrigger`'s children.
     PopoverCloseButton,
     PopoverBody,
     PopoverFooter,
-    ButtonGroup,
+    ButtonGroup
   }}
   code={`
 function ControlledUsage() {
@@ -373,7 +375,7 @@ render prop pattern to gain access to them.
     PopoverCloseButton,
     PopoverBody,
     Box,
-    PopoverFooter,
+    PopoverFooter
   }}
   code={`
 function InternalStateEx() {
@@ -427,7 +429,7 @@ popover. You can change the background, arrow size, box shadow and so on.
     PopoverHeader,
     PopoverArrow,
     PopoverCloseButton,
-    PopoverBody,
+    PopoverBody
   }}
   code={`
 <Popover>
@@ -473,7 +475,7 @@ possible placement values.
     PopoverHeader,
     PopoverArrow,
     PopoverCloseButton,
-    PopoverBody,
+    PopoverBody
   }}
   code={`
 <Popover placement="top-start">
@@ -513,7 +515,7 @@ happen when the component is displayed.
     PopoverHeader,
     PopoverArrow,
     PopoverCloseButton,
-    PopoverBody,
+    PopoverBody
   }}
   code={`
 <Popover isLazy>

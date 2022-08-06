@@ -1,29 +1,28 @@
-import { AddIcon } from '../src/index';
-import {
-  useDisclosure,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
-  DrawerHeader,
-  DrawerBody,
-  DrawerFooter,
-  RadioGroup,
-  FormLabel,
-} from '../src/index';
+import { Playground } from '@divriots/dockit-react/playground';
+import { mdx } from '@mdx-js/react';
+import React from 'react';
+
+import { Box } from '~/box';
 import { Button } from '~/button';
+import Layout from '~/doc-layout';
 import { Drawer } from '~/drawer';
 import { Input } from '~/input';
-import { Stack } from '~/stack';
 import { Radio } from '~/radio';
-import { Box } from '~/box';
 import { Select } from '~/select';
+import { Stack } from '~/stack';
 import { Textarea } from '~/textarea';
-import { InputGroup, InputLeftAddon, InputRightAddon } from '../src/index';
 
-import React from 'react';
-import { mdx } from '@mdx-js/react';
-import { Playground } from '@divriots/dockit-react/playground';
-import Layout from '~/doc-layout';
+import { AddIcon ,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  FormLabel,
+  RadioGroup,
+  useDisclosure,
+, InputGroup, InputLeftAddon, InputRightAddon } from '../src/index';
 export default Layout;
 
 # Drawer
@@ -42,8 +41,8 @@ import {
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
-  DrawerCloseButton,
-} from '@chakra-ui/react';
+  DrawerCloseButton
+} from '@chakra-ui/react'
 ```
 
 ## Usage
@@ -61,7 +60,7 @@ import {
     DrawerHeader,
     DrawerBody,
     Input,
-    DrawerFooter,
+    DrawerFooter
   }}
   code={`
 function DrawerExample() {
@@ -115,7 +114,7 @@ set it to `top`, `right`, `bottom`, or `left`.
     DrawerOverlay,
     DrawerContent,
     DrawerHeader,
-    DrawerBody,
+    DrawerBody
   }}
   code={`
 function PlacementExample() {
@@ -179,7 +178,7 @@ when the drawer opens. Pass the `initialFocusRef` prop.
     InputRightAddon,
     Select,
     Textarea,
-    DrawerFooter,
+    DrawerFooter
   }}
   code={`
 function DrawerExample() {
@@ -264,7 +263,7 @@ Pass the `size` prop if you need to adjust the size of the drawer. Values can be
     DrawerOverlay,
     DrawerContent,
     DrawerHeader,
-    DrawerBody,
+    DrawerBody
   }}
   code={`
 function SizeExample() {
@@ -312,7 +311,7 @@ way to do it:
 
 ```jsx live=false
 export const App = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <>
       <Button onClick={onOpen}>Open</Button>
@@ -325,9 +324,9 @@ export const App = () => {
           <DrawerBody>
             <form
               id="my-form"
-              onSubmit={(e) => {
-                e.preventDefault();
-                console.log('submitted');
+              onSubmit={e => {
+                e.preventDefault()
+                console.log('submitted')
               }}
             >
               <Input name="nickname" placeholder="Type here..." />
@@ -342,8 +341,8 @@ export const App = () => {
         </DrawerContent>
       </Drawer>
     </>
-  );
-};
+  )
+}
 ```
 
 ## Accessibility

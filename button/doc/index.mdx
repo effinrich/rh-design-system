@@ -1,18 +1,25 @@
-import { FaFacebook, FaTwitter } from 'react-icons/fa';
-import { MdBuild, MdCall } from 'react-icons/md';
+import { Playground } from '@divriots/dockit-react/playground'
+import { mdx } from '@mdx-js/react'
+import React from 'react'
+import { FaFacebook, FaTwitter } from 'react-icons/fa'
+import { MdBuild, MdCall } from 'react-icons/md'
 
-import { EmailIcon, ArrowForwardIcon, AddIcon } from '../src/index';
-import { HStack, ButtonGroup } from '../src/index';
-import { Button } from '~/button';
-import { Stack } from '~/stack';
-import { IconButton } from '~/icon-button';
-import { Box } from '~/box';
-import { Spinner } from '~/spinner';
-import React from 'react';
-import { mdx } from '@mdx-js/react';
-import { Playground } from '@divriots/dockit-react/playground';
-import Layout from '~/doc-layout';
-export default Layout;
+import { Box } from '~/box'
+import { Button } from '~/button'
+import Layout from '~/doc-layout'
+import { IconButton } from '~/icon-button'
+import { Spinner } from '~/spinner'
+import { Stack } from '~/stack'
+
+import {
+  AddIcon,
+  ArrowForwardIcon,
+  ButtonGroup,
+  EmailIcon,
+  HStack
+} from '../src/index'
+
+export default Layout
 
 # Button
 
@@ -22,7 +29,7 @@ form, opening a dialog, canceling an action, or performing a delete operation.
 ## Import
 
 ```js
-import { Button, ButtonGroup } from '@chakra-ui/react';
+import { Button, ButtonGroup } from '@chakra-ui/react'
 ```
 
 - **Button:** The button component with support for custom icons, spinners, etc.

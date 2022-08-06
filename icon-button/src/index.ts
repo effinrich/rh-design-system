@@ -1,2 +1,2 @@
-export * from './IconButton';
-export { SearchIcon, PhoneIcon, EmailIcon } from '@chakra-ui/icons';
+export * from './IconButton'
+export { EmailIcon, PhoneIcon, SearchIcon } from '@chakra-ui/icons'

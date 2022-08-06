@@ -1,12 +1,12 @@
-export * from './Table';
+export * from './Table'
+export type { TableProps } from '@chakra-ui/react'
 export {
   TableCaption,
-  Thead,
-  Tr,
-  Th,
+  TableContainer,
   Tbody,
   Td,
   Tfoot,
-  TableContainer,
-} from '@chakra-ui/react';
-export type { TableProps } from '@chakra-ui/react';
+  Th,
+  Thead,
+  Tr
+} from '@chakra-ui/react'

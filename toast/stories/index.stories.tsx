@@ -1,27 +1,31 @@
-import * as React from 'react';
-import { Button, ButtonGroup } from '../src/index';
-import { chakra, useColorMode } from '../src/index';
-import { Alert } from '../src/index';
-import { useToast } from '../src/index';
+import * as React from 'react'
 
-import { themeDecorator } from '../../story-layout/src/index';
+import { themeDecorator } from '../../story-layout/src/index'
+import {
+  Alert,
+  Button,
+  ButtonGroup,
+  chakra,
+  useColorMode,
+  useToast
+} from '../src/index'
 
 export default {
   title: 'Toast',
   decorators: [themeDecorator],
   parameters: {
-    layout: 'centered',
-  },
-};
+    layout: 'centered'
+  }
+}
 
 export function ToastExample() {
-  const toast = useToast();
-  const id = 'login-error-toast';
+  const toast = useToast()
+  const id = 'login-error-toast'
   return (
     <ButtonGroup>
       <Button
         onClick={() => {
-          if (toast.isActive(id)) return;
+          if (toast.isActive(id)) return
           toast({
             id,
             title: 'Error Connecting...',
@@ -30,9 +34,9 @@ export function ToastExample() {
             duration: null,
             isClosable: true,
             onCloseComplete: () => {
-              console.log('hello');
-            },
-          });
+              console.log('hello')
+            }
+          })
         }}
       >
         Show Toast
@@ -44,7 +48,7 @@ export function ToastExample() {
             title: 'Hooray 🥳🥳🥳!!!',
             description: 'You now have permissions to perform this action.',
             status: 'success',
-            duration: 3000,
+            duration: 3000
           })
         }
       >
@@ -52,11 +56,11 @@ export function ToastExample() {
       </Button>
       <Button onClick={() => toast.close(id)}>Close One</Button>
     </ButtonGroup>
-  );
+  )
 }
 
 export function CustomRender() {
-  const toast = useToast();
+  const toast = useToast()
   return (
     <>
       <Button
@@ -68,7 +72,7 @@ export function CustomRender() {
               <chakra.div rounded="md" color="white" p={3} bg="blue.500">
                 Hello World
               </chakra.div>
-            ),
+            )
           })
         }
       >
@@ -80,18 +84,18 @@ export function CustomRender() {
           toast({
             position: 'bottom-right',
             title: 'Testing',
-            description: 'This toast is working well',
+            description: 'This toast is working well'
           })
         }
       >
         Show Toastify
       </Button>
     </>
-  );
+  )
 }
 
 export function SuccessToast() {
-  const toast = useToast();
+  const toast = useToast()
   return (
     <Button
       onClick={() =>
@@ -103,18 +107,18 @@ export function SuccessToast() {
           duration: 3000,
           isClosable: true,
           onCloseComplete: () => {
-            console.log('close');
-          },
+            console.log('close')
+          }
         })
       }
     >
       Show Success Toast
     </Button>
-  );
+  )
 }
 
 export function WarningToast() {
-  const toast = useToast();
+  const toast = useToast()
   return (
     <Button
       onClick={() =>
@@ -123,17 +127,17 @@ export function WarningToast() {
           description: 'This is a warning.',
           status: 'warning',
           duration: 9000,
-          isClosable: true,
+          isClosable: true
         })
       }
     >
       Show Warning Toast
     </Button>
-  );
+  )
 }
 
 export function ErrorToast() {
-  const toast = useToast();
+  const toast = useToast()
   return (
     <Button
       onClick={() =>
@@ -142,17 +146,17 @@ export function ErrorToast() {
           description: 'Unable to create user account.',
           status: 'error',
           duration: 9000,
-          isClosable: true,
+          isClosable: true
         })
       }
     >
       Show Error Toast
     </Button>
-  );
+  )
 }
 
 export const AllSides = () => {
-  const toast = useToast();
+  const toast = useToast()
 
   const positions = [
     'top-left',
@@ -160,16 +164,16 @@ export const AllSides = () => {
     'top-right',
     'bottom-left',
     'bottom',
-    'bottom-right',
-  ] as const;
+    'bottom-right'
+  ] as const
 
   return (
     <>
       <Button
         onClick={() => {
-          positions.forEach((p) => {
-            toast({ position: p, title: p });
-          });
+          positions.forEach(p => {
+            toast({ position: p, title: p })
+          })
         }}
       >
         Trigger
@@ -179,20 +183,20 @@ export const AllSides = () => {
         Close all
       </Button>
     </>
-  );
-};
+  )
+}
 
 export const ColorModeBug = () => {
-  const toast = useToast();
-  const { toggleColorMode } = useColorMode();
+  const toast = useToast()
+  const { toggleColorMode } = useColorMode()
   return (
     <>
       <Button
         onClick={() =>
           toast({
             render() {
-              return <Alert>test</Alert>;
-            },
+              return <Alert>test</Alert>
+            }
           })
         }
       >
@@ -200,11 +204,11 @@ export const ColorModeBug = () => {
       </Button>
       <Button onClick={() => toggleColorMode()}>Toggle Mode</Button>
     </>
-  );
-};
+  )
+}
 
 export const CloseAllTopLeftToasts = () => {
-  const toast = useToast();
+  const toast = useToast()
 
   const positions = [
     'top-left',
@@ -212,16 +216,16 @@ export const CloseAllTopLeftToasts = () => {
     'top-right',
     'bottom-left',
     'bottom',
-    'bottom-right',
-  ] as const;
+    'bottom-right'
+  ] as const
 
   return (
     <>
       <Button
         onClick={() => {
-          positions.forEach((position) => {
-            toast({ position, title: position });
-          });
+          positions.forEach(position => {
+            toast({ position, title: position })
+          })
         }}
       >
         Trigger
@@ -232,21 +236,21 @@ export const CloseAllTopLeftToasts = () => {
         close all top-left
       </Button>
     </>
-  );
-};
+  )
+}
 
 export const UseToastWithDefaults = () => {
   const toast = useToast({
     position: 'top-right',
-    title: 'asdf',
-  });
+    title: 'asdf'
+  })
 
-  return <Button onClick={() => toast()}>toast</Button>;
-};
+  return <Button onClick={() => toast()}>toast</Button>
+}
 
 export const useToastCustomRenderUpdate = () => {
-  const [id, setId] = React.useState(null);
-  const toast = useToast();
+  const [id, setId] = React.useState(null)
+  const toast = useToast()
 
   React.useEffect(() => {
     if (id) {
@@ -258,27 +262,27 @@ export const useToastCustomRenderUpdate = () => {
               <Button variant="ghost">ghost button after update</Button>
               <Button variant="link">link button after update</Button>
             </ButtonGroup>
-          ),
-        });
+          )
+        })
 
-        setId(null);
-      }, 2000);
+        setId(null)
+      }, 2000)
 
-      return () => clearTimeout(timeout);
+      return () => clearTimeout(timeout)
     }
-  }, [id]);
+  }, [id, toast])
 
   return (
     <Button
       onClick={() => {
         const id = toast({
-          render: () => <Button variant="solid">solid button initially</Button>,
-        });
+          render: () => <Button variant="solid">solid button initially</Button>
+        })
 
-        setId(id);
+        setId(id)
       }}
     >
       toast
     </Button>
-  );
-};
+  )
+}

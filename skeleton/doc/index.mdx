@@ -1,13 +1,15 @@
-import { SkeletonCircle, SkeletonText } from '../src/index';
-import { Stack } from '~/stack';
-import { Skeleton } from '~/skeleton';
-import { Box } from '~/box';
+import { Playground } from '@divriots/dockit-react/playground'
+import { mdx } from '@mdx-js/react'
+import React from 'react'
 
-import React from 'react';
-import { mdx } from '@mdx-js/react';
-import { Playground } from '@divriots/dockit-react/playground';
-import Layout from '~/doc-layout';
-export default Layout;
+import { Box } from '~/box'
+import Layout from '~/doc-layout'
+import { Skeleton } from '~/skeleton'
+import { Stack } from '~/stack'
+
+import { SkeletonCircle, SkeletonText } from '../src/index'
+
+export default Layout
 
 # Skeleton
 
@@ -16,7 +18,7 @@ export default Layout;
 ## Import
 
 ```js
-import { Skeleton, SkeletonCircle, SkeletonText } from '@chakra-ui/react';
+import { Skeleton, SkeletonCircle, SkeletonText } from '@chakra-ui/react'
 ```
 
 ## Usage
@@ -49,18 +51,18 @@ Or to wrap another component to take the same height and width.
 Useful when fetching remote data.
 
 ```js live=false
-import { Box } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react'
 
 function Card() {
-  const { data, loading, error } = useRemoteData();
-  if (error) return <Box children="error" />;
+  const { data, loading, error } = useRemoteData()
+  if (error) return <Box children="error" />
   return (
     <Box>
       <Skeleton isLoaded={!loading}>
         <Heading>{data.title}</Heading>
       </Skeleton>
     </Box>
-  );
+  )
 }
 ```
 

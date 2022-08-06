@@ -5,7 +5,7 @@ const typography = {
     normal: '0',
     wide: '0.025em',
     wider: '0.05em',
-    widest: '0.1em',
+    widest: '0.1em'
   },
 
   lineHeights: {
@@ -23,7 +23,7 @@ const typography = {
     '7': '1.75rem',
     '8': '2rem',
     '9': '2.25rem',
-    '10': '2.5rem',
+    '10': '2.5rem'
   },
 
   fontWeights: {
@@ -35,13 +35,13 @@ const typography = {
     semibold: 600,
     bold: 700,
     extrabold: 800,
-    black: 900,
+    black: 900
   },
 
   fonts: {
     heading: `-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
     body: `-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
-    mono: `SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace`,
+    mono: `SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace`
   },
 
   fontSizes: {
@@ -57,8 +57,8 @@ const typography = {
     '6xl': '3.75rem',
     '7xl': '4.5rem',
     '8xl': '6rem',
-    '9xl': '8rem',
-  },
-};
+    '9xl': '8rem'
+  }
+}
 
-export default typography;
+export default typography

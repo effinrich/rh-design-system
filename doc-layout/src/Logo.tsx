@@ -1,11 +1,11 @@
-import * as React from 'react';
-import { useColorModeValue } from '@chakra-ui/react';
+import * as React from 'react'
+import { useColorModeValue } from '@chakra-ui/react'
 
 export const Logo = () => {
   const color = useColorModeValue(
     'var(--chakra-colors-gray-800)',
     'var(--chakra-colors-whiteAlpha-900)'
-  );
+  )
 
   return (
     <svg
@@ -167,5 +167,5 @@ export const Logo = () => {
         />
       </g>
     </svg>
-  );
-};
+  )
+}

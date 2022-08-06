@@ -1,15 +1,14 @@
-export * from './Modal';
+export * from './Modal'
 export {
-  useDisclosure,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalCloseButton,
-  ModalBody,
-  ModalFooter,
-  Text,
   FormLabel,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
   RadioGroup,
-} from '@chakra-ui/react';
-
-export { chakra } from '@chakra-ui/system';
+  Text,
+  useDisclosure
+} from '@chakra-ui/react'
+export { chakra } from '@chakra-ui/system'

@@ -1,34 +1,34 @@
-import * as React from 'react';
-import { PinInput } from '../src/index';
-import {
-  PinInputField,
-  usePinInput,
-  usePinInputField,
-  PinInputProvider,
-  PinInputDescendantsProvider,
-} from '../src/index';
+import * as React from 'react'
 
-import { themeDecorator } from '../../story-layout/src/index';
+import { themeDecorator } from '../../story-layout/src/index'
+import {
+  PinInput,
+  PinInputDescendantsProvider,
+  PinInputField,
+  PinInputProvider,
+  usePinInput,
+  usePinInputField
+} from '../src/index'
 
 export default {
   title: 'PinInput',
   decorators: [themeDecorator],
   parameters: {
-    layout: 'centered',
-  },
-};
+    layout: 'centered'
+  }
+}
 
 const style: React.CSSProperties = {
   width: 40,
   height: 40,
   textAlign: 'center',
   color: 'black',
-  margin: 4,
-};
+  margin: 4
+}
 
 function Input(props: any) {
-  const inputProps = usePinInputField(props);
-  return <input {...inputProps} />;
+  const inputProps = usePinInputField(props)
+  return <input {...inputProps} />
 }
 
 export function HookExample() {
@@ -36,8 +36,8 @@ export function HookExample() {
     autoFocus: true,
     mask: true,
     onComplete: alert,
-    type: 'number',
-  });
+    type: 'number'
+  })
   return (
     <PinInputDescendantsProvider value={descendants}>
       <PinInputProvider value={context}>
@@ -47,7 +47,7 @@ export function HookExample() {
         <Input style={style} />
       </PinInputProvider>
     </PinInputDescendantsProvider>
-  );
+  )
 }
 
 export function ComponentExample() {
@@ -57,12 +57,12 @@ export function ComponentExample() {
       <PinInputField />
       <PinInputField />
     </PinInput>
-  );
+  )
 }
 
 export const Sizes = () => (
   <>
-    {['xs', 'sm', 'md', 'lg'].map((size) => (
+    {['xs', 'sm', 'md', 'lg'].map(size => (
       <div key={size} style={{ marginBottom: '1rem' }}>
         <PinInput size={size}>
           <PinInputField />
@@ -72,18 +72,18 @@ export const Sizes = () => (
       </div>
     ))}
   </>
-);
+)
 
 export const Controlled = () => {
-  const [value, setValue] = React.useState('');
+  const [value, setValue] = React.useState('')
 
   const handleChange = (value: string) => {
-    setValue(value);
-  };
+    setValue(value)
+  }
 
   const handleComplete = (value: string) => {
-    console.log(value);
-  };
+    console.log(value)
+  }
 
   return (
     <PinInput value={value} onChange={handleChange} onComplete={handleComplete}>
@@ -91,5 +91,5 @@ export const Controlled = () => {
       <PinInputField />
       <PinInputField />
     </PinInput>
-  );
-};
+  )
+}

@@ -1,21 +1,24 @@
-import { PhoneIcon, CheckIcon } from '../src/index';
-import { Text } from '../src/index';
-import { Input } from '~/input';
-import { Stack } from '~/stack';
-import { Button } from '~/button';
+import { Playground } from '@divriots/dockit-react/playground'
+import { mdx } from '@mdx-js/react'
+import React from 'react'
+
+import { Button } from '~/button'
+import Layout from '~/doc-layout'
+import { Input } from '~/input'
+import { Stack } from '~/stack'
+
 import {
+  CheckIcon,
   InputGroup,
   InputLeftAddon,
-  InputRightAddon,
   InputLeftElement,
+  InputRightAddon,
   InputRightElement,
-} from '../src/index';
+  PhoneIcon,
+  Text
+} from '../src/index'
 
-import React from 'react';
-import { mdx } from '@mdx-js/react';
-import { Playground } from '@divriots/dockit-react/playground';
-import Layout from '~/doc-layout';
-export default Layout;
+export default Layout
 
 # Input
 
@@ -25,7 +28,7 @@ field.
 ## Import
 
 ```js
-import { Input } from '@chakra-ui/react';
+import { Input } from '@chakra-ui/react'
 ```
 
 ## Usage
@@ -119,7 +122,7 @@ focused the input.
     PhoneIcon,
     Input,
     InputRightElement,
-    CheckIcon,
+    CheckIcon
   }}
   code={`
 <Stack spacing={4}>

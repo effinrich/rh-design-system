@@ -1,19 +1,23 @@
-import { CheckIcon, CloseIcon, EditIcon } from '../src/index';
-import {
-  EditablePreview,
-  EditableInput,
-  useEditableControls,
-  ButtonGroup,
-} from '../src/index';
-import { Editable } from '~/editable';
-import { IconButton } from '~/icon-button';
-import { Flex } from '~/flex';
+import { Playground } from '@divriots/dockit-react/playground'
+import { mdx } from '@mdx-js/react'
+import React from 'react'
 
-import React from 'react';
-import { mdx } from '@mdx-js/react';
-import { Playground } from '@divriots/dockit-react/playground';
-import Layout from '~/doc-layout';
-export default Layout;
+import Layout from '~/doc-layout'
+import { Editable } from '~/editable'
+import { Flex } from '~/flex'
+import { IconButton } from '~/icon-button'
+
+import {
+  ButtonGroup,
+  CheckIcon,
+  CloseIcon,
+  EditableInput,
+  EditablePreview,
+  EditIcon,
+  useEditableControls
+} from '../src/index'
+
+export default Layout
 
 # Editable
 
@@ -34,7 +38,7 @@ Chakra UI exports 3 components to handle this functionality.
 - `EditablePreview`: The read-only view of the component.
 
 ```js
-import { Editable, EditableInput, EditablePreview } from '@chakra-ui/react';
+import { Editable, EditableInput, EditablePreview } from '@chakra-ui/react'
 ```
 
 ## Usage
@@ -67,7 +71,7 @@ the component.
     EditIcon,
     Editable,
     EditablePreview,
-    EditableInput,
+    EditableInput
   }}
   code={`
 function CustomControlsExample() {

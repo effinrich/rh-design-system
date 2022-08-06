@@ -1,2 +1,2 @@
-export * from './Box';
-export { StarIcon } from '@chakra-ui/icons';
+export * from './Box'
+export { StarIcon } from '@chakra-ui/icons'

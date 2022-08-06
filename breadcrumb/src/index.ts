@@ -1,9 +1,9 @@
-export * from './Breadcrumb';
+export * from './Breadcrumb'
+export { ChevronRightIcon } from '@chakra-ui/icons'
 export {
   BreadcrumbItem,
   BreadcrumbLink,
   extendTheme,
-  useTheme,
   ThemeProvider,
-} from '@chakra-ui/react';
-export { ChevronRightIcon } from '@chakra-ui/icons';
+  useTheme
+} from '@chakra-ui/react'

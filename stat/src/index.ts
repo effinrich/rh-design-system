@@ -1,8 +1,8 @@
-export * from './Stat';
+export * from './Stat'
 export {
-  StatLabel,
-  StatNumber,
-  StatHelpText,
-  StatGroup,
   StatArrow,
-} from '@chakra-ui/react';
+  StatGroup,
+  StatHelpText,
+  StatLabel,
+  StatNumber
+} from '@chakra-ui/react'

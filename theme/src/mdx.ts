@@ -5,7 +5,7 @@ const mdx = {
     lineHeight: 1.2,
     fontWeight: 'bold',
     fontSize: '1.875rem',
-    letterSpacing: '-.025em',
+    letterSpacing: '-.025em'
   },
   h2: {
     mt: '3rem',
@@ -15,8 +15,8 @@ const mdx = {
     fontSize: '1.5rem',
     letterSpacing: '-.025em',
     '& + h3': {
-      mt: '1.5rem',
-    },
+      mt: '1.5rem'
+    }
   },
   h3: {
     mt: '2rem',
@@ -24,28 +24,28 @@ const mdx = {
     lineHeight: 1.25,
     fontWeight: 'semibold',
     fontSize: '1.25rem',
-    letterSpacing: '-.025em',
+    letterSpacing: '-.025em'
   },
   h4: {
     mt: '1rem',
     mb: '0.5rem',
     lineHeight: 1.375,
     fontWeight: 'semibold',
-    fontSize: '1.125rem',
+    fontSize: '1.125rem'
   },
   h5: {
     mt: '1rem',
     mb: '0.5rem',
     lineHeight: 1.375,
     fontWeight: 'semibold',
-    fontSize: '1.125rem',
+    fontSize: '1.125rem'
   },
   h6: {
     mt: '1rem',
     mb: '0.5rem',
     lineHeight: 1.375,
     fontWeight: 'semibold',
-    fontSize: '1.125rem',
+    fontSize: '1.125rem'
   },
   a: {
     color: 'teal.500',
@@ -53,18 +53,18 @@ const mdx = {
     transition: 'color 0.15s',
     transitionTimingFunction: 'ease-out',
     _hover: {
-      color: 'teal.600',
-    },
+      color: 'teal.600'
+    }
   },
   p: {
     mt: '1.25rem',
     lineHeight: 1.7,
     'blockquote &': {
-      mt: 0,
-    },
+      mt: 0
+    }
   },
   hr: {
-    my: '4rem',
+    my: '4rem'
   },
   blockquote: {
     bg: 'orange.100',
@@ -73,15 +73,15 @@ const mdx = {
     rounded: 'lg',
     px: '1.25rem',
     py: '1rem',
-    my: '1.5rem',
+    my: '1.5rem'
   },
   ul: {
     mt: '1.5rem',
     ml: '1.25rem',
     'blockquote &': { mt: 0 },
     '& > * + *': {
-      mt: '0.25rem',
-    },
+      mt: '0.25rem'
+    }
   },
   code: {
     rounded: 'sm',
@@ -89,8 +89,8 @@ const mdx = {
     fontSize: '0.875em',
     py: '2px',
     whiteSpace: 'nowrap',
-    lineHeight: 'normal',
-  },
-};
+    lineHeight: 'normal'
+  }
+}
 
-export default mdx;
+export default mdx

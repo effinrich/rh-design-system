@@ -1,15 +1,15 @@
-import * as React from 'react';
-import { Image } from '../src/index';
+import * as React from 'react'
 
-import { themeDecorator } from '../../story-layout/src/index';
+import { themeDecorator } from '../../story-layout/src/index'
+import { Image } from '../src/index'
 
 export default {
   title: 'Image',
   decorators: [themeDecorator],
   parameters: {
-    layout: 'centered',
-  },
-};
+    layout: 'centered'
+  }
+}
 
 export const Basic = () => (
   <Image
@@ -17,7 +17,7 @@ export const Basic = () => (
     src="https://bit.ly/dan-abramov"
     alt="welcome"
   />
-);
+)
 
 /**
  * Chakra has support for fallback images
@@ -31,7 +31,7 @@ export const FallbackSrcExample = () => (
     src="https://bit.ly/dan-abramov"
     fallbackSrc="https://via.placeholder.com/240"
   />
-);
+)
 
 /**
  * NEW! You can also pass a fallback component
@@ -42,7 +42,7 @@ export const FallbackElementExample = () => (
     src="https://bit.ly/dan-abramov"
     fallback={<div style={{ width: 240, height: 240, background: 'red' }} />}
   />
-);
+)
 
 /**
  * Fit images to their own dimensions by passing
@@ -57,7 +57,7 @@ export const withFit = () => (
     width="400px"
     height="300px"
   />
-);
+)
 
 /**
  * Native `img` has support for `width`, and `height` prop,
@@ -71,19 +71,19 @@ export const withNativeWidth = () => (
     htmlWidth="300px"
     htmlHeight="300px"
     onLoad={() => {
-      console.log('loaded');
+      console.log('loaded')
     }}
   />
-);
+)
 
 export const Bug = () => {
-  const [src, setSrc] = React.useState('');
+  const [src, setSrc] = React.useState('')
 
   const onClick = () => {
     setSrc(
       'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'
-    );
-  };
+    )
+  }
 
   return (
     <div>
@@ -91,5 +91,5 @@ export const Bug = () => {
       <button onClick={onClick}>set image</button>
       <p>src set to Avatar: {src}</p>
     </div>
-  );
-};
+  )
+}

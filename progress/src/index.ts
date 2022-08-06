@@ -1,8 +1,8 @@
-export * from './Progress';
+export * from './Progress'
 export {
   extendTheme,
-  useTheme,
-  ThemeProvider,
   ProgressLabel,
-} from '@chakra-ui/react';
-export { chakra } from '@chakra-ui/system';
+  ThemeProvider,
+  useTheme
+} from '@chakra-ui/react'
+export { chakra } from '@chakra-ui/system'

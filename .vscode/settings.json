@@ -1,0 +1,43 @@
+{
+  "editor.maxTokenizationLineLength": 5000,
+  // "[javascript]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  //   "editor.formatOnSave": true
+  // },
+  // "[typescript]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  //   "editor.formatOnSave": true
+  // },
+  // "[typescriptreact]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  //   "editor.formatOnSave": true
+  // },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.fixAll.eslint": true
+  },
+  "eslint.options": {
+    "extensions": [".js", ".jsx", ".ts", ".tsx"]
+  },
+  "eslint.packageManager": "yarn",
+  "eslint.validate": [
+    "markdown",
+    "mdx",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "workbench.colorCustomizations": {
+    "statusBar.noFolderBackground": "#222225",
+    "statusBar.debuggingBackground": "#511f1f",
+    "editor.lineHighlightBackground": "#1073cf2d",
+    "editorBracketMatch.border": "#575B5F",
+    "editor.lineHighlightBorder": "#9fced11f"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.workingDirectories": ["./"]
+}

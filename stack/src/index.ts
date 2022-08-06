@@ -1,2 +1,2 @@
-export * from './Stack';
-export { HStack, VStack, StackDivider, Heading, Text } from '@chakra-ui/react';
+export * from './Stack'
+export { Heading, HStack, StackDivider, Text, VStack } from '@chakra-ui/react'

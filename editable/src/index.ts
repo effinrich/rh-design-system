@@ -1,10 +1,10 @@
-export * from './Editable';
+export * from './Editable'
+export { CheckIcon, CloseIcon, EditIcon } from '@chakra-ui/icons'
 export {
-  EditablePreview,
-  EditableInput,
-  useEditableControls,
   ButtonGroup,
+  EditableInput,
+  EditablePreview,
   useEditable,
-} from '@chakra-ui/react';
-export { CheckIcon, CloseIcon, EditIcon } from '@chakra-ui/icons';
-export { chakra } from '@chakra-ui/system';
+  useEditableControls
+} from '@chakra-ui/react'
+export { chakra } from '@chakra-ui/system'
