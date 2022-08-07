@@ -1,4 +1,4 @@
 import { theme } from '../src/index'
 
 export default {}
-export const complete_theme = () => theme
+export const CompleteTheme = () => theme

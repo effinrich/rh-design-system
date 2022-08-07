@@ -71,7 +71,7 @@ export function HorizontalSlider() {
       </SliderTrack>
       <SliderThumb />
       <SliderMark value={90} top="20px">
-        "90%"
+        90%
       </SliderMark>
     </Slider>
   )

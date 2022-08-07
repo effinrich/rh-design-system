@@ -11,9 +11,9 @@ export default {
   }
 }
 
-export const basic = () => <Textarea defaultValue="This is a textarea" />
+export const Basic = () => <Textarea defaultValue="This is a textarea" />
 
-export const rows = () => (
+export const Rows = () => (
   <Textarea defaultValue="This is a textarea" rows={12} />
 )
 

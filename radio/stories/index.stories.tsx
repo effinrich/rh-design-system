@@ -28,7 +28,7 @@ export const Disabled = () => <Radio isDisabled>Disabled</Radio>
 
 export const Readonly = () => (
   <Radio mt="40px" isChecked isReadOnly size="lg" colorScheme="green">
-    I'm a readonly radio
+    I am a readonly radio
   </Radio>
 )
 

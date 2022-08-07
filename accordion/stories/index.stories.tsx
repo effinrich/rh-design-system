@@ -64,7 +64,7 @@ export const Basic = () => (
   </Accordion>
 )
 
-export const allowToggle = () => (
+export const As = () => (
   <Accordion allowToggle>
     <AccordionItem>
       <h2>
@@ -102,7 +102,7 @@ export const allowToggle = () => (
   </Accordion>
 )
 
-export const allowMultiple = () => (
+export const AllowMultiple = () => (
   <Accordion allowMultiple>
     <AccordionItem>
       <h2>
@@ -140,7 +140,7 @@ export const allowMultiple = () => (
   </Accordion>
 )
 
-export const stylingExpanded = () => (
+export const StylingExpanded = () => (
   <Accordion allowToggle>
     <AccordionItem>
       <h2>

@@ -21,9 +21,9 @@ export default {
   }
 }
 
-export const basic = () => <Tag>Gray</Tag>
+export const Basic = () => <Tag>Gray</Tag>
 
-export const withSizes = () => (
+export const WithSizes = () => (
   <>
     <Tag size="sm">Gray</Tag>
     <Tag size="md">Gray</Tag>
@@ -36,7 +36,7 @@ export const withSizes = () => (
  * change the background color of the tag component
  */
 
-export const colorSchemes = () => (
+export const ColorSchemes = () => (
   <>
     <Tag size="sm" colorScheme="green">
       Gray
@@ -56,14 +56,14 @@ export const colorSchemes = () => (
  * or after (right side) the tag component
  */
 
-export const withLeftIcon = () => (
+export const WithLeftIcon = () => (
   <Tag colorScheme="cyan">
     <TagLeftIcon w="12px" h="12px" as={AddIcon} />
     <TagLabel>Green</TagLabel>
   </Tag>
 )
 
-export const withRightIcon = () => (
+export const WithRightIcon = () => (
   <>
     <Tag colorScheme="cyan">
       <TagLabel>Green</TagLabel>
@@ -81,7 +81,7 @@ export const withRightIcon = () => (
  * Use the `TagCloseButton` to apply a close button to the tag component.
  */
 
-export const withCloseButton = () => (
+export const WithCloseButton = () => (
   <>
     <Tag variant="solid" size="sm" colorScheme="cyan">
       <TagLabel>Tab Label</TagLabel>
@@ -105,7 +105,7 @@ export const withCloseButton = () => (
  * within the tag component.
  */
 
-export const withCustomElement = () => (
+export const WithCustomElement = () => (
   <Tag size="lg" colorScheme="red" borderRadius="full">
     <Avatar
       src="https://bit.ly/sage-adebayo"

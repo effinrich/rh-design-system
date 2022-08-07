@@ -248,7 +248,7 @@ export const UseToastWithDefaults = () => {
   return <Button onClick={() => toast()}>toast</Button>
 }
 
-export const useToastCustomRenderUpdate = () => {
+export const UseToastCustomRenderUpdate = () => {
   const [id, setId] = React.useState(null)
   const toast = useToast()
 

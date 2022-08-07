@@ -89,7 +89,7 @@ export const HookWithFormatAndParse = () => {
   )
 }
 
-export const usage = () => (
+export const Usage = () => (
   <NumberInput max={50} min={10}>
     <NumberInputField />
     <NumberInputStepper>
@@ -99,7 +99,7 @@ export const usage = () => (
   </NumberInput>
 )
 
-export const withMinAndMax = () => (
+export const WithMinAndMax = () => (
   <NumberInput defaultValue={15} min={10} max={20}>
     <NumberInputField />
     <NumberInputStepper>
@@ -109,7 +109,7 @@ export const withMinAndMax = () => (
   </NumberInput>
 )
 
-export const withStep = () => (
+export const WithStep = () => (
   <NumberInput step={5} defaultValue={15} min={10} max={30}>
     <NumberInputField />
     <NumberInputStepper>
@@ -119,7 +119,7 @@ export const withStep = () => (
   </NumberInput>
 )
 
-export const withPrecision = () => (
+export const WithPrecision = () => (
   <NumberInput defaultValue={15} precision={2} step={0.2}>
     <NumberInputField />
     <NumberInputStepper>
@@ -129,7 +129,7 @@ export const withPrecision = () => (
   </NumberInput>
 )
 
-export const withClampValueDisabled = () => (
+export const WithClampValueDisabled = () => (
   <NumberInput defaultValue={15} max={30} clampValueOnBlur={false}>
     <NumberInputField />
     <NumberInputStepper>
@@ -139,7 +139,7 @@ export const withClampValueDisabled = () => (
   </NumberInput>
 )
 
-export const allowOutOfRange = () => (
+export const AllowOutOfRange = () => (
   <NumberInput
     defaultValue={15}
     max={10}
@@ -154,7 +154,7 @@ export const allowOutOfRange = () => (
   </NumberInput>
 )
 
-export const inputSizes = () => (
+export const InputSizes = () => (
   <Stack>
     {['xs', 'sm', 'md', 'lg'].map(size => (
       <NumberInput key={size} size={size} defaultValue={15} min={10}>
@@ -179,12 +179,7 @@ export const WithReactHookForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <NumberInput
-        name="sales"
-        onBlur={() => {
-          console.log('blurred')
-        }}
-      >
+      <NumberInput name="sales" onBlur={() => {}}>
         <NumberInputField ref={register} />
         <NumberInputStepper>
           <NumberIncrementStepper />
@@ -221,14 +216,7 @@ export const WithFormControl = () => {
           </FormLabel>
           <FormError>is invalid!</FormError>
         </chakra.div>
-        <NumberInput
-          max={50}
-          min={10}
-          defaultValue={20}
-          onBlur={() => {
-            console.log('blurred')
-          }}
-        >
+        <NumberInput max={50} min={10} defaultValue={20} onBlur={() => {}}>
           <NumberInputField />
           <NumberInputStepper>
             <NumberIncrementStepper />
